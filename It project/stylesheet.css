@@ -138,7 +138,10 @@ nav .logo {
   font-weight: bold;
   margin-left: 30px; 
 }
-
+header .homepage{
+  margin:0;
+  padding:0;
+}
 .home-container1{
   display:flex;
   flex-direction: column;
@@ -207,4 +210,26 @@ nav .logo {
   object-fit: cover; 
   margin: 0 auto 20px;
   display: block;
+}
+
+.featured-catg{
+  text-align: center;
+  color:var(--foreground);
+  margin:100px 0px;
+  margin-bottom: 0px;
+  padding:80px;
+  background-color:var(--secondary);
+}
+.featured-catg h3{
+  padding:10px;
+  font-size:27px;
+}
+.featured-catg .cards{
+  grid-template-columns: repeat(3, 1fr);
+}
+.featured-catg .card{
+  box-shadow:none;
+}
+.featured-catg a{
+  text-decoration: none;
 }
