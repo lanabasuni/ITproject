@@ -220,6 +220,9 @@ nav .logo {
   font-weight:500;
   font-size:25px;
 }
+.featured-catg .cards{
+  grid-template-columns: repeat(3, 1fr);
+}
 /*code farah*/
  form {
     padding: 20px;
