@@ -36,7 +36,6 @@ body {
   margin:0;
   padding:0;
   background: var(--background);
-  color: var(--primary-foreground);
 }
 nav{
   background: var(--sidebar-primary);
@@ -140,6 +139,7 @@ nav .logo {
 .homepage{
   margin:0;
   padding:0;
+  color: var(--primary-foreground);
 }
 .home-container1{
   display:flex;
@@ -283,13 +283,13 @@ input, textarea {
     text-align: center;
     justify-content: center;
 }
-label{
+.contact-main label{
   color:var(--foreground);
 }
 
 .modal {
   display: none; 
-  position: fixed;0
+  position: fixed;
   z-index: 1000; 
   left: 0;
   top: 0;
