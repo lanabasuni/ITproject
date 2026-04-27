@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("theme", isDark ? "dark" : "light");
   });
 });
+<<<<<<< HEAD
 function showAlert() {
     document.getElementById("faqModal").style.display = "block";
 }
@@ -24,3 +25,7 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+=======
+
+ 
+>>>>>>> 63357e885a502b2e76d5b68b92cdb864b84d2de1
