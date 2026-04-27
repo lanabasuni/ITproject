@@ -137,7 +137,7 @@ nav .logo {
   font-weight: bold;
   margin-left: 30px; 
 }
-header .homepage{
+.homepage{
   margin:0;
   padding:0;
 }
@@ -189,7 +189,7 @@ header .homepage{
   grid-template-columns: repeat(2, 1fr);
   gap: 40px; 
   max-width: 1000px;
-  margin: 30px auto;
+  margin: 70px auto;
 }
 .card {
   background: var(--card);
@@ -211,6 +211,15 @@ header .homepage{
   margin: 0 auto 20px;
   display: block;
 }
+.featured-catg{
+  margin:0px;
+  padding:70px;
+  background-color: var(--secondary);
+}
+.featured-catg h3{
+  font-weight:500;
+  font-size:25px;
+}
 /*code farah*/
  form {
     padding: 20px;
@@ -230,7 +239,7 @@ input, textarea {
 
 }
 
-button {
+.contact-main button {
     width: 100%;
     padding: 12px;
     background-color: var(--primary);
@@ -251,7 +260,7 @@ button {
 .x{
   color:var(--foreground);
 }
-main{
+.contact-main{
    margin:0;
   padding:0;
     display: flex !important;
