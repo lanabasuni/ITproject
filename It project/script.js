@@ -11,3 +11,16 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("theme", isDark ? "dark" : "light");
   });
 });
+function showAlert() {
+    document.getElementById("faqModal").style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById("faqModal").style.display = "none";
+}
+window.onclick = function(event) {
+    var modal = document.getElementById("faqModal");
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
