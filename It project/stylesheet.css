@@ -500,3 +500,13 @@ input, textarea {
   justify-content: center; 
   gap: 0;
 }
+.logo{
+  display: flex;         
+  align-items: center;    
+  gap: 10px;
+}
+
+.logo-nav{
+  width:80px;
+  margin-right: -20px;
+}
