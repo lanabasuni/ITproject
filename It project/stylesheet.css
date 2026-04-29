@@ -509,3 +509,141 @@ input, textarea {
   width:80px;
   margin-right: -20px;
 }
+/* schedule css */
+
+/* PAGE TITLE */
+.name {
+  margin-top: 80px;
+  padding: 24px 40px 8px;
+}
+
+.name h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+/* dark mode: push content right bec nav becomes a sidebar */
+.dark .name {
+  margin-left: 200px;
+}
+
+.dark #scheduletable {
+  margin-left: 240px;
+}
+
+.dark #events-kolha {
+  margin-left: 240px;
+}
+
+/* SCHEDULE */
+#scheduletable {
+  margin: 20px 40px;
+  background: var(--card);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  padding: 24px;
+}
+
+#scheduletable h2 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--foreground);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: none;
+}
+
+thead tr {
+  border-bottom: 2px solid var(--border);
+}
+
+th {
+  text-align: left;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 12px 16px;
+  background: var(--card);
+  color: var(--foreground);
+  border: none;
+}
+
+td {
+  padding: 14px 16px;
+  font-size: 14px;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  color: var(--foreground);
+}
+
+tbody{
+  background-color: var(--card);
+}
+
+tbody tr:hover {
+  background-color: var(--secondary);
+}
+
+/* EVENTS SECTION */
+#events-kolha {
+  margin: 20px 40px 40px;
+  background: var(--card);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  padding: 24px;
+}
+
+#events-kolha h2 {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--foreground);
+}
+
+.event {
+  background-color: var(--secondary);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.event h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--foreground);
+}
+
+.event p {
+  font-size: 13px;
+  color: var(--accent);
+}
+
+.event span {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.logo-schedule{
+  width:25px;
+}
+.dark .all-schedule{
+  margin-right: 150px;
+}
+
+/* schedule css end */
