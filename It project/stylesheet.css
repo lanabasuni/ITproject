@@ -93,11 +93,21 @@ nav ul li a.active{
   height: 30px;
 }
 nav .logo {
-  margin:0 10px;
-  color:var(--primary-foreground);
-  font-size:30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 10px;
+  margin-left: 30px;
+  color: var(--primary-foreground);
+  font-size: 30px;
   font-weight: bold;
-  margin-left: 30px; 
+}
+
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;  
+  flex-shrink: 0;
 }
 .dark nav {
   flex-direction: column;
@@ -107,6 +117,16 @@ nav .logo {
   left: 0;
   justify-content: flex-start;
   padding-top: 20px;
+}
+.dark nav .logo {
+  padding: 10px 0;
+  margin-left: 8px;
+  font-size: 30px; 
+}
+
+.dark nav .logo-icon {
+  width: 36px;
+  height: 36px;
 }
 
 .dark nav ul {
@@ -129,13 +149,7 @@ nav .logo {
 .dark body {
   margin-left: 200px;  
 }
-.dark nav .logo {
-  margin:10px 100px;
-  color:var(--primary-foreground);
-  font-size:30px;
-  font-weight: bold;
-  margin-left: 30px; 
-}
+
 .homepage{
   margin:0;
   padding:0;
@@ -178,7 +192,8 @@ nav .logo {
   border: 2px solid var(--primary-foreground);
 }
 .coursesbtn:hover{
-  color:var(--accent);
+  background-color:var(--accent);
+  border-color: var(--accent);
 }
 .startbtn:hover{
   color:var(--primary);
@@ -202,6 +217,7 @@ nav .logo {
 }
 .card:hover{
    transform: translateY(-5px);
+   transition: 0.6s;
 }
 .card-image {
   width: 80px;
@@ -248,7 +264,11 @@ input, textarea {
     background-color: var(--primary);
     color: white;
     border: none;
+    border-radius:8px;
     cursor: pointer;
+}
+.contact-main button:hover{
+  background-color: var(--accent);
 }
 .logo,h3{
   color: var(--foreground);
