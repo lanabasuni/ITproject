@@ -6,7 +6,7 @@
   --card: #f9f9f9;
   --primary: #2563eb;          /* Blue */
   --primary-foreground: #ffffff;
-  --secondary: #e0e7ff;        /* Light blue */
+  --secondary: #e0e7ff;        /* Light blue */ 
   --accent: #3b82f6;           /* Bright blue */
   --muted: #f3f4f6;            /* Light gray */
   --border: #e5e7eb;
@@ -331,29 +331,32 @@ input, textarea {
 /*css omar*/
 
 /*css omarmosalah*/
-.headtext {
-    margin-left: 50px;
+.dark .headtext-dash{
+  margin-left: 50px;
+}
+.headtext-dash {
+    margin-left: 20px;
     padding-top: 75px; 
     padding-bottom: 5px;
     background-color: var(--background);
     color: var(--foreground);
 }
 
-.headtext h2 {
+.headtext-dash h2 {
     margin: 0;
     margin-bottom: 30px;
 }
-.cards {
+.cards-dash {
   background: var(--card);
   color: var(--foreground);
   padding: 10px;
   border-radius: 15px;
   box-shadow: 0 5px 6px var(--muted);
   gap: 20px;
-  width: 300px;
+  width: 350px;
   text-align: center;
 }
-.cardscontainer {
+.cardscontainer-dash {
   display: flex;
   gap: 20px;            
   justify-content: center; 
@@ -362,31 +365,33 @@ input, textarea {
   margin-bottom: 0;  
   margin-left: 50px;
   margin-top: 10px;
+  margin-right: 15px;
+  font-size: 15px;
   color: var(--foreground); 
 }
 
-.cards p {
-  font-size: 30px;
+.cards-dash p {
+  font-size: 20px;
   font-weight: bold;
   color: var(--foreground);   
   text-align: center;             
 }
-.cardscontainer{
-  text-align: center;
-  margin-right: 15px;
-  font-size: 20px;
-}
-.MyCourses{
-  margin-right: 500px;
+
+.dark .MyCourses-dash{
   margin-left: 50px;
+}
+.MyCourses-dash{
+  margin-right: 500px;
+  margin-left: 20px;
   background-color: var(--card);
   text-align:left;
   border-radius: 15px;
   padding: 15px;
   margin-top: 0;
   color: var(--foreground);
+  margin-top: 20px;
 }
-.courses {
+.courses-dash {
   text-align:left; 
   background-color:var(--background);
   border-radius: 20px;    
@@ -398,7 +403,7 @@ input, textarea {
   padding-right: 15px;
   color: var(--foreground);
 }
-.courses h3{
+.courses-dash h3{
   text-align:left; 
 
 }
@@ -437,12 +442,11 @@ input, textarea {
   color: var(--background);
 }
 
-.footerst{
-  margin-left: 50px;
-  color: var(--foreground);
-}
 .footerhead{
   max-width: 250px;
+}
+.dark .footerst{
+  margin-left: 50px;
 }
 .footerst{
   display: flex;                
@@ -451,7 +455,15 @@ input, textarea {
   text-align: center;          
   flex-wrap: wrap;             
   padding: 20px;
-  background-color: var(--sidebar);
+  background-color: var(--card);
+  color: var(--foreground);
+  font-size: 14px;
+  margin-top: 0;
+  padding-top: 0;
+}
+.footerhr{
+  
+  margin-bottom: 0;
 }
 .footerfoot{
   text-align: center; 
@@ -466,11 +478,25 @@ input, textarea {
     font-size: 16px;
     display: block;             
     padding: 5px 0;             
-    transition: color 0.3s;    
+    transition: color 0.3s;   
+    font-size: inherit; 
 }
 .footer-nav ul li a:hover {
     color: var(--primary);      
 }
 .footer-nav {
     text-align: left;
+}
+.logo-foot{
+  width: 80px; 
+  height: auto;
+  position: relative;
+  top: 18px; 
+  margin-right: -20px;
+}
+.footer h2{
+  display: flex;         
+  align-items: center;    
+  justify-content: center; 
+  gap: 0;
 }
