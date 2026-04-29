@@ -348,7 +348,6 @@ input, textarea {
   from { opacity: 0; transform: translateY(-20px); }
   to { opacity: 1; transform: translateY(0); }
 }
-/*css omar*/
 
 /*css omarmosalah*/
 .dark .headtext-dash{
@@ -508,7 +507,7 @@ input, textarea {
     text-align: left;
 }
 .logo-foot{
-  width: 80px; 
+  width: 70px; 
   height: auto;
   position: relative;
   top: 18px; 
