@@ -330,3 +330,147 @@ input, textarea {
 }
 /*css omar*/
 
+/*css omarmosalah*/
+.headtext {
+    margin-left: 50px;
+    padding-top: 75px; 
+    padding-bottom: 5px;
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+.headtext h2 {
+    margin: 0;
+    margin-bottom: 30px;
+}
+.cards {
+  background: var(--card);
+  color: var(--foreground);
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 5px 6px var(--muted);
+  gap: 20px;
+  width: 300px;
+  text-align: center;
+}
+.cardscontainer {
+  display: flex;
+  gap: 20px;            
+  justify-content: center; 
+  flex-wrap: wrap;
+  text-align: center;    
+  margin-bottom: 0;  
+  margin-left: 50px;
+  margin-top: 10px;
+  color: var(--foreground); 
+}
+
+.cards p {
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--foreground);   
+  text-align: center;             
+}
+.cardscontainer{
+  text-align: center;
+  margin-right: 15px;
+  font-size: 20px;
+}
+.MyCourses{
+  margin-right: 500px;
+  margin-left: 50px;
+  background-color: var(--card);
+  text-align:left;
+  border-radius: 15px;
+  padding: 15px;
+  margin-top: 0;
+  color: var(--foreground);
+}
+.courses {
+  text-align:left; 
+  background-color:var(--background);
+  border-radius: 20px;    
+  padding-top: 15px;  
+  padding-bottom: 15px;  
+  margin-left: 15px;
+  margin-right: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: var(--foreground);
+}
+.courses h3{
+  text-align:left; 
+
+}
+.progress-bar {
+    width: 100%;           
+    height: 10px;          
+    background-color: var(--border); 
+    border-radius: 5px;
+    overflow: hidden;      
+    margin: 10px 0;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: var(--primary); 
+    border-radius: 5px;
+}
+
+.progress-text {
+  color: var(--primary);
+}
+.continuebtn {
+  background: var(--primary);
+  border: 2px solid var(--primary);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  color: var(--background);
+}
+.certificatebtn{
+  background: var(--primary);
+  border: 2px solid var(--primary);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  color: var(--background);
+}
+
+.footerst{
+  margin-left: 50px;
+  color: var(--foreground);
+}
+.footerhead{
+  max-width: 250px;
+}
+.footerst{
+  display: flex;                
+  justify-content: space-around; 
+  align-items: flex-start;      
+  text-align: center;          
+  flex-wrap: wrap;             
+  padding: 20px;
+  background-color: var(--sidebar);
+}
+.footerfoot{
+  text-align: center; 
+    width: 100%;
+    display: block;
+    margin-top: 20px;
+    color: var(--foreground);
+}
+.footer-nav ul li a {
+    text-decoration: none;      
+    color: var(--foreground);                
+    font-size: 16px;
+    display: block;             
+    padding: 5px 0;             
+    transition: color 0.3s;    
+}
+.footer-nav ul li a:hover {
+    color: var(--primary);      
+}
+.footer-nav {
+    text-align: left;
+}
