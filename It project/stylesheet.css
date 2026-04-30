@@ -149,7 +149,7 @@ nav .logo {
   box-sizing: border-box;
 }
 .dark body {
-  margin-left: 200px;  
+  margin-left: 230px;  
 }
 
 .homepage{
@@ -476,7 +476,7 @@ input, textarea {
   max-width: 250px;
 }
 .dark .footerst{
-  margin-left: 50px;
+  margin-left: 10px;
 }
 .footerst{
   display: flex;                
