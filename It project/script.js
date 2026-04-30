@@ -41,14 +41,18 @@ function toggleAudio(btn) {
 }
 function playVideo(videoPath) {
   const modal = document.getElementById('videoModal');
-  const videoPlayer = document.getElementById('myVideo');
-  const videoSource = document.getElementById('videoSource');
-  if (!modal) return;
+  const videoPlayer = document.getElementById('myVideo'); 
+  if (!modal || !videoPlayer) return;
 
-  videoSource.src = videoPath;
-  videoPlayer.load();
+  // 1. Convert the standard link to an embed link
+  // This changes 'watch?v=ID' to 'embed/ID'
+  let embedUrl = videoPath.replace("watch?v=", "embed/");
+
+  // 2. Set the source with autoplay enabled
+  videoPlayer.src = embedUrl + "?autoplay=1"; 
+  
+  // 3. Show the modal
   modal.style.display = 'flex';
-  videoPlayer.play();
 }
 
 function closeVideo() {
@@ -57,14 +61,15 @@ function closeVideo() {
   if (!modal) return;
 
   modal.style.display = 'none';
-  videoPlayer.pause();
-  videoPlayer.currentTime = 0;
+
+  // 4. Reset the src to stop the video/audio immediately
+  videoPlayer.src = ""; 
 }
 
-// Close modal if user clicks outside the video
-window.addEventListener('click', function (e) {
+// Close modal if user clicks outside of it
+window.onclick = function(event) {
   const modal = document.getElementById('videoModal');
-  if (e.target === modal) {
+  if (event.target == modal) {
     closeVideo();
   }
-});
+}

@@ -55,7 +55,7 @@
 			<h3>Front-End Web Development</h3>
 			<p class="coursedescription">Learn HTML, CSS, JavaScript and build responsive websites.</p>
 			
-                    <button class="watch-btn" onclick="playVideo('media/videos/data.mp4')">Watch Trailer</button>
+                    <button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfvlcnOs6T')">Watch Trailer</button>
 		              <a href="login_signup.html">
                     <button type="button" class="watch-btn on">Enroll now</button>
 		            </a>
@@ -73,7 +73,7 @@
 	   	    <h3>Data Analysis Professional</h3>
 		    <p class="coursedescription">Learn Excel, SQL, Python and Power BI.</p>
 		  
-                    <button class="watch-btn" onclick="playVideo('media/videos/data.mp4')">Watch Trailer</button>
+                    <button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfvXJnOsjG')">Watch Trailer</button>
 		              <a href="login_signup.html">
                     <button type="button" class="watch-btn on">Enroll now</button>
 		            </a>
@@ -91,7 +91,7 @@
 		    <h3>Digital Marketing Course</h3>
 		    <p class="coursedescription">Learn social media marketing and SEO professionally.</p>
 			
-                    <button class="watch-btn" onclick="playVideo('media/videos/marketing.mp4')">Watch Trailer</button>
+                    <button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfvXEnOsjl')">Watch Trailer</button>
 		    <a href="login_signup.html">
     <button type="button" class="watch-btn on">Enroll now</button>
 		</a>
@@ -107,7 +107,7 @@
 		</div>
 	      <h3>Graphic Design Masterclass</h3>
 	      <p class="coursedescription">A training program that qualifies you to transform ideas into creative visual elements, covering the basics of design (colors, composition, fonts) and professionalism in Adobe programs (Photoshop, Illustrator, InDesign).</p>
-	      <button class="watch-btn" onclick="playVideo('media/videos/design.mp4')">Watch Trailer</button>
+	      <button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfvXpnOsi5')">Watch Trailer</button>
 	      <a href="login.html">
     <button type="button" class="watch-btn on">Enroll now</button>
 	</a>
@@ -125,7 +125,7 @@
 			<h3>Ethical Hacking course</h3>
 			<p class="coursedescription">Discover and fix security vulnerabilities now before malicious hackers exploit themIt is a training program that aims to teach humans how to think and act like hackers.</p>
 			
-			<button class="watch-btn" onclick="playVideo('media/videos/cyber.mp4')">watch trailer</button>
+			<button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfv6LnOsV8')">watch trailer</button>
 			<a href="login.html">
     <button type="button" class="watch-btn on">Enroll now</button>
 </a>
@@ -142,7 +142,7 @@
 	</div>
 		<h3>DevOps course</h3>
 		<p class="coursedescription">An educational journey aimed at transforming you into someone who bridges the gap between the world of "building code" and the world of "running code"</p>
-		<button class="watch-btn" onclick="playVideo('media/videos/dev.mp4')">watch trailer</button>
+		<button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfvXBnOsi2')">watch trailer</button>
 		<a href="login_signup.html">
     <button type="button" class="watch-btn on">Enroll now</button>
 </a>
@@ -150,13 +150,12 @@
 </div>
 </main>
     <div id="videoModal" class="courses-modal">
-        <div class="courses-modal-content">
-            <span class="close-btn" onclick="closeVideo()">&times;</span>
-            <video id="myVideo" width="100%" controls>
-	    <source id="videoSource" src="" type="video/mp4">
-        </video>
-        </div>
+    <div class="courses-modal-content">
+        <span class="close-btn" onclick="closeVideo()">&times;</span>
+        <!-- The <iframe> replaces the <video> tag to support YouTube URLs -->
+        <iframe id="myVideo" width="100%" height="450" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
+</div>
     <script src="script.js"></script>
 </body>
 <hr class="footerhr">
