@@ -39,3 +39,19 @@ function toggleAudio(btn) {
         icon.setAttribute('d', 'M8 5v14l11-7z');
     }
 }
+const modal = document.getElementById('videoModal');
+const videoPlayer = document.getElementById('myVideo');
+const videoSource = document.getElementById('videoSource');
+
+function playVideo(videoPath) {
+    videoSource.src = videoPath; 
+    videoPlayer.load();         
+    modal.style.display = 'flex';
+    videoPlayer.play();          
+}
+
+function closeVideo() {
+    modal.style.display = 'none';
+    videoPlayer.pause();         
+    videoPlayer.currentTime = 0; 
+}

@@ -5,27 +5,160 @@
         <link rel="stylesheet" href="stylesheet.css">
         <script src="script.js"></script>
     </head>
-    <body>
-    <nav>
-      <div class="logo">
+    <body class="courses-body">
+        <header>
+               <nav>
+                 <div class="logo">
                  <img src="media/logo.png" alt="EduHub Logo" class="logo-icon"/>
                  EduHub
+                 </div>
+                  <ul type="none">
+                             <li><a href="index.html">Home</a></li>
+                             <li><a href="courses.html" class="active">Courses</a></li>
+                              <li><a href="resources.html">Resources</a></li>
+                              <li><a href="schedule.html">Schedule</a></li>
+                             <li><a href="dashboard.html">Dashboard</a></li>
+                             <li><a href="contact.html">Contact us</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="login_signup.html">Login</a></li>
+                             <li>
+                             <button id="theme-toggle" class="toggletheme">
+                             <img src="media/themes.png"/>
+                             </button>
+                             </li>
+                 </ul>
+                </nav>
+                </header>
+     <main class="courses-main">
+        <h1>Explore Our Courses</h1>
+
+            <div class="categories">
+                <span class="cat-btn">Programming</span>
+		<span class="cat-btn">Data</span>
+		<span class="cat-btn">Cybersecurity</span>
+		<span class="cat-btn">Engineering</span>
+                <span class="cat-btn">Business</span>
+                <span class="cat-btn">Design</span>
             </div>
-        <ul type="none">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="courses.html" class="active">Courses</a></li>
-            <li><a href="resources.html">Resources</a></li>
-            <li><a href="schedule.html">Schedule</a></li>
-            <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="contact.html">Contact us</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="login_signup.html">Login</a></li>
-            <li>
-               <button id="theme-toggle" class="toggletheme">
-                 <img src="media/themes.png"/>
-               </button>
-            </li>
-            </ul>
-    </nav>
-    </body>
-</html>  
+        </div>
+
+        <div class="courses-grid">
+            <div class="course-card">
+                <div class="card-image img-1">1</div>
+		
+                <div class="card-footer">
+                    <div class="footer-top">
+                        <span class="badge badge-blue">Programming</span>
+                     
+			<span class="price"><b>$99</b></span>
+			<span class="badge badge-blue">Dr/Mostafa ahmed</span>
+                    </div>
+			<h3>Front-End Web Development</h3>
+			<p>Learn HTML, CSS, JavaScript and build responsive websites.</p>
+			
+                    <button class="watch-btn" onclick="playVideo('videos/web.mp4')">watch Trailer</button>
+               	    <a href="login.html">
+    <button type="button" class="watch-btn on">Enroll now</button>
+		</a>
+		 </div>
+            </div>
+
+            <div class="course-card">
+                <div class="card-image img-2">2</div>
+                <div class="card-footer">
+                    <div class="footer-top">
+                        <span class="badge badge-blue">Programming</span>
+                        <span class="price"><b>$149</b></span>
+			<span class="badge badge-blue">Dr/mohamed Khaled</span>
+                    </div>
+	   	    <h3>Data Analysis Professional</h3>
+		    <p>Learn Excel, SQL, Python and Power BI.</p>
+		  
+                    <button class="watch-btn" onclick="playVideo('media/videos/data.mp4')">Watch Trailer</button>
+		    <a href="login_signup.html">
+    <button type="button" class="watch-btn on">Enroll now</button>
+		</a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="card-image img-3">3</div>
+                <div class="card-footer">
+                    <div class="footer-top">
+                        <span class="badge badge-blue">Marketing</span>
+                        <span class="price"><b>$79</b></span>
+			<span class="badge badge-blue">Melanie Fahmy</span>
+                    </div>
+		    <h3>Digital Marketing Course</h3>
+		    <p>Learn social media marketing and SEO professionally.</p>
+			
+                    <button class="watch-btn" onclick="playVideo('videos/marketing.mp4')">Watch Trailer</button>
+		    <a href="login.html">
+    <button type="button" class="watch-btn on">Enroll now</button>
+		</a>
+                </div>
+            </div>
+		<div class="course-card">
+		     <div class="card-image img-1">4</div>
+		     <div class="card-footer">
+		     <div class="footer-top">
+		  	 <span class="badge badge-blue">graphic</span>
+		  	 <span class="price"><b>150$</b></span>
+			<span class="badge badge-blue">Dr/Alaa Ahmed</span>
+		</div>
+	      <h3>Graphic Design Masterclass</h3>
+	      <p>A training program that qualifies you to transform ideas into creative visual elements, covering the basics of design (colors, composition, fonts) and professionalism in Adobe programs (Photoshop, Illustrator, InDesign).</p>
+	      <button class="watch-btn" onclick="playVideo('videos/design.mp4')">Watch Trailer</button>
+	      <a href="login.html">
+    <button type="button" class="watch-btn on">Enroll now</button>
+	</a>
+	</div>
+	</div>
+	
+	<div class="course-card">
+		<div class="card-image img-2">5</div>
+		<div class="card-footer">
+		<div class="footer-top">
+			<span class="badge badge-blue">cybersecurity</span>
+			<span class="price"><b>200$</b></span>
+			<span class="badge badge-blue">ENG/Ebrahim hegazy</span>
+    </div>
+			<h3>Ethical Hacking course</h3>
+			<p>Discover and fix security vulnerabilities now before malicious hackers exploit themIt is a training program that aims to teach humans how to think and act like hackers.</p>
+			
+			<button class="watch-btn" onclick="playVideo('videos/cyber.mp4')">watch trailer</button>
+			<a href="login.html">
+    <button type="button" class="watch-btn on">Enroll now</button>
+</a>
+   </div>
+   </div>
+       
+   <div class="course-card">
+	<div class="card-image img-3">6</div>
+	<div class="card-footer">
+	<div class="footer-top">
+		<span class="badge badge-blue">Engineering<br>programming</span>
+		<span class="price"><b> 75$</b></span>
+		<span class="badge badge-blue">ENG/Adham osama</span>
+	</div>
+		<h3>DevOps course</h3>
+		<p>An educational journey aimed at transforming you into someone who bridges the gap between the world of "building code" and the world of "running code"</p>
+		<button class="watch-btn" onclick="playVideo('videos/dev.mp4')">watch trailer</button>
+		<a href="login.html">
+    <button type="button" class="watch-btn on">Enroll now</button>
+</a>
+</div>
+</div>
+</main>
+    <div id="videoModal" class="courses-modal">
+        <div class="courses-modal-content">
+            <span class="close-btn" onclick="closeVideo()">&times;</span>
+            <video id="myVideo" width="100%" controls>
+	    <source id="videoSource" src="" type="video/mp4">
+        </div>
+    </div>
+
+    <script src="style.js"></script>
+</body>
+</html>
+
