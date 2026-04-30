@@ -899,18 +899,6 @@ tbody tr:hover {
 .dark .price{
   color: var(--foreground);
 }
-<<<<<<< HEAD
-
-.course-card {
-    background: var(--card);
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); 
-    transition: transform 0.3s ease;
-}
-
-=======
->>>>>>> 268666df7dd62b1413cd694a5f1b4db37ad07afc
 .filter-card {
     background: var(--card);
     border-radius: 12px;
