@@ -885,9 +885,20 @@ tbody tr:hover {
 
 .courses-main h1 {
     text-align: center;
-    margin-bottom: 25px;
+    margin: 0;
+    padding-top: 40px;
+    color: var(--foreground);
+    padding-bottom: 15px;
 }
-
+.dark .courses-main h1 {
+    text-align: center;
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 15px;
+}
+.dark .price{
+  color: var(--foreground);
+}
 .filter-card {
     background: var(--card);
     border-radius: 12px;
@@ -895,7 +906,9 @@ tbody tr:hover {
     box-shadow: 0 4px 12px rgba(0,0,0,0.03);
     margin-bottom: 30px;
 }
-
+.coursedescription{
+  color:var(--foreground)
+}
 
 
 .categories {
