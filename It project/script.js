@@ -72,4 +72,26 @@ window.onclick = function(event) {
   if (event.target == modal) {
     closeVideo();
   }
-}
+} 
+// ── Category Filter ──
+document.addEventListener("DOMContentLoaded", function () {
+    const filterBtns = document.querySelectorAll('.cat-btn');
+    const cards = document.querySelectorAll('.course-card');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+            filterBtns.forEach(b => b.classList.remove('active-filter'));
+            this.classList.add('active-filter');
+
+            const filter = this.getAttribute('data-filter');
+
+            cards.forEach(card => {
+                if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+});

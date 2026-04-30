@@ -31,18 +31,17 @@
      <main class="courses-main">
         <h1>Explore Our Courses</h1>
 
-            <div class="categories">
-                <span class="cat-btn">Programming</span>
-		<span class="cat-btn">Data</span>
-		<span class="cat-btn">Cybersecurity</span>
-		<span class="cat-btn">Engineering</span>
-                <span class="cat-btn">Business</span>
-                <span class="cat-btn">Design</span>
-            </div>
-        </div>
+    <div class="categories">
+    <span class="cat-btn active-filter" data-filter="all">All</span>
+    <span class="cat-btn" data-filter="programming">Programming</span>
+    <span class="cat-btn" data-filter="cybersecurity">Cybersecurity</span>
+    <span class="cat-btn" data-filter="engineering">Engineering</span>
+    <span class="cat-btn" data-filter="business">Business</span>
+    <span class="cat-btn" data-filter="design">Design</span>
+    </div>
 
         <div class="courses-grid">
-            <div class="course-card">
+            <div class="course-card" data-category="programming">
                 <div class="card-image img-1"><img src="media/courses/front.jpg" ></div>
 		
                 <div class="card-footer">
@@ -55,14 +54,14 @@
 			<h3>Front-End Web Development</h3>
 			<p class="coursedescription">Learn HTML, CSS, JavaScript and build responsive websites.</p>
 			
-                    <button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfvlcnOs6T')">Watch Trailer</button>
+                    <button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfvlcnOs6T')">Watch Intro</button>
 		              <a href="login_signup.html">
                     <button type="button" class="watch-btn on">Enroll now</button>
 		            </a>
 		 </div>
             </div>
 
-            <div class="course-card">
+            <div class="course-card" data-category="programming">
                 <div class="card-image"><img src="media/courses/data.png" ></div>
                 <div class="card-footer">
                     <div class="footer-top">
@@ -73,14 +72,14 @@
 	   	    <h3>Data Analysis Professional</h3>
 		    <p class="coursedescription">Learn Excel, SQL, Python and Power BI.</p>
 		  
-                    <button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfvXJnOsjG')">Watch Trailer</button>
+                    <button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfvXJnOsjG')">Watch Intro</button>
 		              <a href="login_signup.html">
                     <button type="button" class="watch-btn on">Enroll now</button>
 		            </a>
                 </div>
             </div>
 
-            <div class="course-card">
+            <div class="course-card" data-category="business">
                 <div class="card-image"><img src="media/courses/marketing.jpg" ></div>
                 <div class="card-footer">
                     <div class="footer-top">
@@ -91,13 +90,13 @@
 		    <h3>Digital Marketing Course</h3>
 		    <p class="coursedescription">Learn social media marketing and SEO professionally.</p>
 			
-                    <button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfvXEnOsjl')">Watch Trailer</button>
+                    <button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfvXEnOsjl')">Watch Intro</button>
 		    <a href="login_signup.html">
     <button type="button" class="watch-btn on">Enroll now</button>
 		</a>
                 </div>
             </div>
-		<div class="course-card">
+		<div class="course-card" data-category="design">
 		     <div class="card-image"><img src="media/courses/design.webp" ></div>
 		     <div class="card-footer">
 		     <div class="footer-top">
@@ -107,14 +106,14 @@
 		</div>
 	      <h3>Graphic Design Masterclass</h3>
 	      <p class="coursedescription">A training program that qualifies you to transform ideas into creative visual elements, covering the basics of design (colors, composition, fonts) and professionalism in Adobe programs (Photoshop, Illustrator, InDesign).</p>
-	      <button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfvXpnOsi5')">Watch Trailer</button>
+	      <button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfvXpnOsi5')">Watch Intro</button>
 	      <a href="login.html">
     <button type="button" class="watch-btn on">Enroll now</button>
 	</a>
 	</div>
 	</div>
 	
-	<div class="course-card">
+	<div class="course-card" data-category="cybersecurity">
 		<div class="card-image"><img src="media/courses/hacking.webp" ></div>
 		<div class="card-footer">
 		<div class="footer-top">
@@ -125,14 +124,14 @@
 			<h3>Ethical Hacking course</h3>
 			<p class="coursedescription">Discover and fix security vulnerabilities now before malicious hackers exploit themIt is a training program that aims to teach humans how to think and act like hackers.</p>
 			
-			<button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfv6LnOsV8')">watch trailer</button>
+			<button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfv6LnOsV8')">Watch Intro</button>
 			<a href="login.html">
     <button type="button" class="watch-btn on">Enroll now</button>
 </a>
    </div>
    </div>
        
-   <div class="course-card">
+   <div class="course-card" data-category="engineering">
 	<div class="card-image"><img src="media/courses/devops.jpg" ></div>
 	<div class="card-footer">
 	<div class="footer-top">
@@ -142,11 +141,150 @@
 	</div>
 		<h3>DevOps course</h3>
 		<p class="coursedescription">An educational journey aimed at transforming you into someone who bridges the gap between the world of "building code" and the world of "running code"</p>
-		<button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfvXBnOsi2')">watch trailer</button>
+		<button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfvXBnOsi2')">Watch Intro</button>
 		<a href="login_signup.html">
     <button type="button" class="watch-btn on">Enroll now</button>
 </a>
 </div>
+</div>
+<!-- Programming -->
+<div class="course-card" data-category="programming">
+    <div class="card-image"><img src="media/courses/python.jpg"></div>
+    <div class="card-footer">
+        <div class="footer-top">
+            <span class="badge badge-blue">Programming</span>
+            <span class="price"><b>$120</b></span>
+            <span class="badge badge-blue">Dr. Ahmed Samy</span>
+        </div>
+        <h3>Python for Beginners</h3>
+        <p class="coursedescription">Learn Python from scratch, covering fundamentals, data structures, and real-world projects.</p>
+        <button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfvlcnOs6T')">Watch Intro</button>
+        <button class="watch-btn on" onclick="location.href='login_signup.html'">Enroll Now</button>
+    </div>
+</div>
+
+<!-- Business -->
+<div class="course-card" data-category="business">
+    <div class="card-image"><img src="media/courses/business.jpg"></div>
+    <div class="card-footer">
+        <div class="footer-top">
+            <span class="badge badge-blue">Business</span>
+            <span class="price"><b>$89</b></span>
+            <span class="badge badge-blue">Prof. Sara Mahmoud</span>
+        </div>
+        <h3>Business Management Fundamentals</h3>
+        <p class="coursedescription">Master the core principles of business management, leadership, and organizational strategy.</p>
+        <button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfvXEnOsjl')">Watch Intro</button>
+        <button class="watch-btn on" onclick="location.href='login_signup.html'">Enroll Now</button>
+    </div>
+</div>
+
+<div class="course-card" data-category="business">
+    <div class="card-image"><img src="media/courses/finance.jpg"></div>
+    <div class="card-footer">
+        <div class="footer-top">
+            <span class="badge badge-blue">Business</span>
+            <span class="price"><b>$99</b></span>
+            <span class="badge badge-blue">Dr. Khaled Hassan</span>
+        </div>
+        <h3>Financial Accounting Basics</h3>
+        <p class="coursedescription">Understand financial statements, bookkeeping, and accounting principles used in real businesses.</p>
+        <button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfvXEnOsjl')">Watch Intro</button>
+        <button class="watch-btn on" onclick="location.href='login_signup.html'">Enroll Now</button>
+    </div>
+</div>
+
+<!-- Design -->
+<div class="course-card" data-category="design">
+    <div class="card-image"><img src="media/courses/uiux.webp"></div>
+    <div class="card-footer">
+        <div class="footer-top">
+            <span class="badge badge-blue">Design</span>
+            <span class="price"><b>$110</b></span>
+            <span class="badge badge-blue">Nour El-Din</span>
+        </div>
+        <h3>UI/UX Design Essentials</h3>
+        <p class="coursedescription">Learn user interface and experience design using Figma, wireframing, and prototyping techniques.</p>
+        <button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfvXpnOsi5')">Watch Intro</button>
+        <button class="watch-btn on" onclick="location.href='login_signup.html'">Enroll Now</button>
+    </div>
+</div>
+
+<div class="course-card" data-category="design">
+    <div class="card-image"><img src="media/courses/video.png"></div>
+    <div class="card-footer">
+        <div class="footer-top">
+            <span class="badge badge-blue">Design</span>
+            <span class="price"><b>$85</b></span>
+            <span class="badge badge-blue">Omar Tarek</span>
+        </div>
+        <h3>Video Editing Masterclass</h3>
+        <p class="coursedescription">Edit professional videos using Premiere Pro and After Effects from beginner to advanced level.</p>
+        <button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfvXpnOsi5')">Watch Intro</button>
+        <button class="watch-btn on" onclick="location.href='login_signup.html'">Enroll Now</button>
+    </div>
+</div>
+
+<!-- Cybersecurity -->
+<div class="course-card" data-category="cybersecurity">
+    <div class="card-image"><img src="media/courses/network.jpg"></div>
+    <div class="card-footer">
+        <div class="footer-top">
+            <span class="badge badge-blue">Cybersecurity</span>
+            <span class="price"><b>$175</b></span>
+            <span class="badge badge-blue">ENG. Mohamed Nabil</span>
+        </div>
+        <h3>Network Security Fundamentals</h3>
+        <p class="coursedescription">Learn how to secure networks, detect intrusions, and protect systems from cyber threats.</p>
+        <button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfv6LnOsV8')">Watch Intro </button>
+        <button class="watch-btn on" onclick="location.href='login_signup.html'">Enroll Now</button>
+    </div>
+</div>
+
+<div class="course-card" data-category="cybersecurity">
+    <div class="card-image"><img src="media/courses/forensics.jpg" ></div>
+    <div class="card-footer">
+        <div class="footer-top">
+            <span class="badge badge-blue">Cybersecurity</span>
+            <span class="price"><b>$190</b></span>
+            <span class="badge badge-blue">Dr. Hany Farouk</span>
+        </div>
+        <h3>Digital Forensics & Investigation</h3>
+        <p class="coursedescription">Investigate cybercrimes, recover digital evidence, and analyze security incidents professionally.</p>
+        <button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfv6LnOsV8')">Watch Intro</button>
+        <button class="watch-btn on" onclick="location.href='login_signup.html'">Enroll Now</button>
+    </div>
+</div>
+
+<!-- Engineering -->
+<div class="course-card" data-category="engineering">
+    <div class="card-image"><img src="media/courses/cloud.jpg"></div>
+    <div class="card-footer">
+        <div class="footer-top">
+            <span class="badge badge-blue">Engineering</span>
+            <span class="price"><b>$130</b></span>
+            <span class="badge badge-blue">ENG. Youssef Ali</span>
+        </div>
+        <h3>Cloud Computing with AWS</h3>
+        <p class="coursedescription">Deploy and manage applications on Amazon Web Services — from basics to cloud architecture.</p>
+        <button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfvXBnOsi2')">Watch Intro</button>
+        <button class="watch-btn on" onclick="location.href='login_signup.html'">Enroll Now</button>
+    </div>
+</div>
+
+<div class="course-card" data-category="engineering">
+    <div class="card-image"><img src="media/courses/embedded.jpg"></div>
+    <div class="card-footer">
+        <div class="footer-top">
+            <span class="badge badge-blue">Engineering</span>
+            <span class="price"><b>$95</b></span>
+            <span class="badge badge-blue">Dr. Tarek Fouad</span>
+        </div>
+        <h3>Embedded Systems Programming</h3>
+        <p class="coursedescription">Program microcontrollers and embedded systems using C, covering hardware interfacing and real-time systems.</p>
+        <button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfvXBnOsi2')">Watch Intro</button>
+        <button class="watch-btn on" onclick="location.href='login_signup.html'">Enroll Now</button>
+    </div>
 </div>
 </main>
     <div id="videoModal" class="courses-modal">

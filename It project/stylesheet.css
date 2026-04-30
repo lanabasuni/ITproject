@@ -885,7 +885,6 @@ tbody tr:hover {
     max-width: 1200px;
     margin: 40px auto;
     padding: 0 20px;
-    transition: all 0.3s ease;
 }
 
 .courses-main h1 {
@@ -950,7 +949,7 @@ tbody tr:hover {
 
 
 .course-card {
-
+    background-color: var(--card);
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
@@ -985,7 +984,10 @@ tbody tr:hover {
     gap: 10px;
    
 }
-
+.active-filter {
+    background-color: var(--accent);
+    color: white;
+}
 
 
 .badge {
