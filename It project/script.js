@@ -12,16 +12,17 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 function showAlert() {
-    document.getElementById("faqModal").style.display = "block";
+    document.getElementById("faqModal").style.visibility = "visible";
 }
 
 function closeModal() {
-    document.getElementById("faqModal").style.display = "none";
+    document.getElementById("faqModal").style.visibility = "hidden";
 }
+
 window.onclick = function(event) {
     var modal = document.getElementById("faqModal");
     if (event.target == modal) {
-        modal.style.display = "none";
+        modal.style.visibility = "hidden";
     }
 }
 
