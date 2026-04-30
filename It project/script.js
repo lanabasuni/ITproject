@@ -39,19 +39,32 @@ function toggleAudio(btn) {
         icon.setAttribute('d', 'M8 5v14l11-7z');
     }
 }
-const modal = document.getElementById('videoModal');
-const videoPlayer = document.getElementById('myVideo');
-const videoSource = document.getElementById('videoSource');
-
 function playVideo(videoPath) {
-    videoSource.src = videoPath; 
-    videoPlayer.load();         
-    modal.style.display = 'flex';
-    videoPlayer.play();          
+  const modal = document.getElementById('videoModal');
+  const videoPlayer = document.getElementById('myVideo');
+  const videoSource = document.getElementById('videoSource');
+  if (!modal) return;
+
+  videoSource.src = videoPath;
+  videoPlayer.load();
+  modal.style.display = 'flex';
+  videoPlayer.play();
 }
 
 function closeVideo() {
-    modal.style.display = 'none';
-    videoPlayer.pause();         
-    videoPlayer.currentTime = 0; 
+  const modal = document.getElementById('videoModal');
+  const videoPlayer = document.getElementById('myVideo');
+  if (!modal) return;
+
+  modal.style.display = 'none';
+  videoPlayer.pause();
+  videoPlayer.currentTime = 0;
 }
+
+// Close modal if user clicks outside the video
+window.addEventListener('click', function (e) {
+  const modal = document.getElementById('videoModal');
+  if (e.target === modal) {
+    closeVideo();
+  }
+});
