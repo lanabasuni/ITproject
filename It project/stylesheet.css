@@ -217,7 +217,7 @@ nav .logo {
   border-radius: 10px;
   box-shadow: 0 5px 6px var(--muted);
   text-align: center;
-
+  transition: transform 0.2s ease;
 }
 .card:hover{
    transform: translateY(-5px);
@@ -663,3 +663,211 @@ tbody tr:hover {
 }
 
 /* schedule css end */
+
+
+/*============================Recources css/*============================*/
+.Recources-Main {
+  padding: 80px 40px 40px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.Recources-Main h1 {
+  color: var(--foreground);
+  margin-bottom: 30px;
+}
+
+/* ── Top Media Cards Grid ── */
+.main-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* ── Video Card & Audio Card base ── */
+.video-card,
+.Audio-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card-header {
+  display: block;
+  font-size: 20px;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+
+/* ── Video Thumb (iframe) ── */
+.video-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.video-thumb iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ── Audio Thumb ── */
+.Audio-thumb {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #a8c0f0, #7baee8, #6a8de0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.play-btn {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.35);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, transform 0.15s;
+}
+
+.play-btn:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(1.08);
+}
+
+.Audio-thumb audio {
+  width: 100%;
+}
+
+/* ── Card Text ── */
+.card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--foreground);
+  margin: 0;
+}
+
+.card-description {
+  font-size: 13px;
+  color: var(--foreground);
+  opacity: 0.65;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ── Additional Video Resources ── */
+.additional-videos {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.additional-videos h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--foreground);
+  margin: 0 0 16px;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.video-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.video-thumbnail {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    /* background: linear-gradient(135deg, #a8c0f0, #7baee8, #6a8de0); fallback if image missing */
+    background-size: cover;
+    background-position: center;
+    display: block;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.video-thumbnail:hover {
+  opacity: 0.85;
+}
+
+.video-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--foreground);
+  margin: 0;
+}
+
+.video-duration {
+  font-size: 13px;
+  color: var(--foreground);
+  opacity: 0.55;
+  margin: 0;
+}
+
+/* ── Downloadable Resources ── */
+.downloadable-resources {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.downloadable-resources h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--foreground);
+  margin: 0 0 16px;
+}
+
+.download-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.download-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--secondary);
+  border-radius: 8px;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.download-item:hover {
+  opacity: 0.8;
+}
+
+.file-name {
+  font-size: 14px;
+  color: var(--foreground);
+}

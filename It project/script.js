@@ -24,3 +24,18 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+function toggleAudio(btn) {
+    const audio = document.getElementById('podcast-audio');
+    const icon = btn.querySelector('svg path');
+
+    if (audio.paused) {
+        audio.play();
+        // Switch to pause icon
+        icon.setAttribute('d', 'M6 19h4V5H6v14zm8-14v14h4V5h-4z');
+    } else {
+        audio.pause();
+        // Switch back to play icon
+        icon.setAttribute('d', 'M8 5v14l11-7z');
+    }
+}
