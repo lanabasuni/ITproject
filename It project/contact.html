@@ -30,17 +30,28 @@
     <main class="contact-main">
     <h1 class="pop">Contact Us</h1>
     <h3 class="x">Have questions ? We'd love to hear from you.Send us a message and we'll respond as soon as possible.</h3>
-    <form>
-            <label>Your Name</label>
-            <input type="text"  required placeholder="Enter your name">
-            <label>Email Address</label>
-            <input type="text"  required  placeholder="farah@example.com">
-            <label>Subject</label>
-            <input type="text" required placeholder="How can we help you?">
-            <label>Message</label>
-            <textarea rows="6"  required placeholder="Your message here.."></textarea>
-        <button type="submit">Send Message</button>
-    </form>
+     <form id="contactForm">
+  <label>Your Name</label>
+  <input type="text" id="name" placeholder="Enter your name">
+  <span class="error" id="nameError"></span>
+
+  <label>Email Address</label>
+  <input type="text" id="email" placeholder="farah@example.com">
+  <span class="error" id="emailError"></span>
+
+  <label>Subject</label>
+  <input type="text" id="subject" placeholder="How can we help you?">
+  <span class="error" id="subjectError"></span>
+
+  <label>Message</label>
+  <textarea id="message" rows="6" placeholder="Your message here.."></textarea>
+  <span class="error" id="messageError"></span>
+
+  <button type="submit">Send Message</button>
+  </form>
+   <p id="success" style="color: rgb(131, 206, 131); font-weight: bold;"></p>
+
+
     <div class="info">
         <h4 class="x">Contact Information</h4>
         <p class="x">📩support@eduhub.com</p>

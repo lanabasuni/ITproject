@@ -24,6 +24,61 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+//form validation and saving to local storage 
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  let name = document.getElementById("name").value.trim();
+  let email = document.getElementById("email").value.trim();
+  let subject = document.getElementById("subject").value.trim();
+  let message = document.getElementById("message").value.trim();
+
+  
+  let nameError = document.getElementById("nameError");
+  let emailError = document.getElementById("emailError");
+  let subjectError = document.getElementById("subjectError");
+  let messageError = document.getElementById("messageError");
+  let success = document.getElementById("success");
+
+
+  nameError.textContent = "";
+  emailError.textContent = "";
+  subjectError.textContent = "";
+  messageError.textContent = "";
+  success.textContent = "";
+
+  let valid = true;
+
+  if (!name) {
+    nameError.textContent = "Name is required.";
+    valid = false;
+  }
+
+  if (!email) {
+    emailError.textContent = "Email is required.";
+    valid = false;
+  } else {
+    let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/;
+    if (!email.match(emailPattern)) {
+      emailError.textContent = "Invalid email format.";
+      valid = false;
+    }
+  }
+
+  if (!subject) {
+    subjectError.textContent = "Subject is required.";
+    valid = false;
+  }
+  if (!message) {
+    messageError.textContent = "Message is required.";
+    valid = false;
+  }
+  if (valid) {
+    success.textContent = "Message sent successfully!";
+    document.getElementById("contactForm").reset();
+  }
+});
+
 //js faq
 function showAlert() {
     document.getElementById("faqModal").style.visibility = "visible";
@@ -61,7 +116,6 @@ function playVideo(videoPath) {
   const videoPlayer = document.getElementById('myVideo'); 
   if (!modal || !videoPlayer) return;
 
-  '
   let embedUrl = videoPath.replace("watch?v=", "embed/");
 
   
