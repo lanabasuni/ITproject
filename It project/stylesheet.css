@@ -409,6 +409,7 @@ input:focus, textarea:focus {
     margin: 0;
     margin-bottom: 30px;
 }
+
 .cards-dash {
   background: var(--card);
   color: var(--foreground);
@@ -504,29 +505,33 @@ input:focus, textarea:focus {
 .progress-text {
   color: var(--primary);
 }
-.continuebtn {
+
+.continuebtn ,
+.certificatebtn {
   background: var(--primary);
   border: 2px solid var(--primary);
   border-radius: 10px;
-  transition: all 0.3s ease;
+  transition: all 0.0s ease;
   cursor: pointer;
   color: var(--background);
+  font-weight: bolder;
 }
-.certificatebtn{
-  background: var(--primary);
-  border: 2px solid var(--primary);
-  border-radius: 10px;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  color: var(--background);
+
+.continuebtn:hover ,
+.certificatebtn:hover {
+    filter: brightness(1.2); 
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 15px var(--card);
 }
 
 .footerhead{
   max-width: 250px;
 }
+
 .dark .footerst{
   margin-left: 10px;
 }
+
 .footerst{
   display: flex;                
   justify-content: space-around; 
@@ -540,17 +545,19 @@ input:focus, textarea:focus {
   margin-top: 0;
   padding-top: 0;
 }
+
 .footerhr{
-  
   margin-bottom: 0;
 }
+
 .footerfoot{
-  text-align: center; 
+    text-align: center; 
     width: 100%;
     display: block;
     margin-top: 20px;
     color: var(--foreground);
 }
+
 .footer-nav ul li a {
     text-decoration: none;      
     color: var(--foreground);                
@@ -560,9 +567,11 @@ input:focus, textarea:focus {
     transition: color 0.3s;   
     font-size: inherit; 
 }
+
 .footer-nav ul li a:hover {
     color: var(--primary);      
 }
+
 .footer-nav {
     text-align: left;
 }
@@ -576,12 +585,15 @@ input:focus, textarea:focus {
   gap: 15px;
   margin-right: 3px;
 }
+
 .logo-nav{
   width:80px;
   margin-right: -20px;
 }
-/* schedule css */
+/*css omarmosalah end*/
 
+
+/* schedule css */
 
 .name {
   margin-top: 80px;
