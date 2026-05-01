@@ -553,7 +553,7 @@ input, textarea {
 }
 /* schedule css */
 
-/* PAGE TITLE */
+
 .name {
   margin-top: 80px;
   padding: 24px 40px 8px;
@@ -565,7 +565,6 @@ input, textarea {
   color: var(--foreground);
 }
 
-/* dark mode: push content right bec nav becomes a sidebar */
 .dark .name {
   margin-left: 200px;
 }
@@ -578,7 +577,7 @@ input, textarea {
   margin-left: 240px;
 }
 
-/* SCHEDULE */
+
 #scheduletable {
   margin: 20px 40px;
   background: var(--card);
@@ -633,7 +632,6 @@ tbody tr:hover {
   background-color: var(--secondary);
 }
 
-/* EVENTS SECTION */
 #events-kolha {
   margin: 20px 40px 40px;
   background: var(--card);
