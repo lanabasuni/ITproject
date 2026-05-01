@@ -1,127 +1,111 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const toggle = document.getElementById("theme-toggle");
 
+  // theme toggle
+  const toggle = document.getElementById("theme-toggle");
   if (localStorage.getItem("theme") === "dark") {
     document.documentElement.classList.add("dark");
   }
+  if (toggle) {
+    toggle.addEventListener("click", function () {
+      document.documentElement.classList.toggle("dark");
+      const isDark = document.documentElement.classList.contains("dark");
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+    });
+  }
 
-  toggle.addEventListener("click", function () {
-    document.documentElement.classList.toggle("dark");
-    const isDark = document.documentElement.classList.contains("dark");
-    localStorage.setItem("theme", isDark ? "dark" : "light");
-  });
-});
-//home page categories cards
-document.addEventListener("DOMContentLoaded", () => {
-  const cards = document.querySelectorAll(".featured-catg .card");
-
-  cards.forEach(card => {
-    card.addEventListener("click", e => {
+  // imagemap
+  const areas = document.querySelectorAll(".imagemap area");
+  areas.forEach(area => {
+    area.addEventListener("click", e => {
       e.preventDefault();
-      const filterValue = card.getAttribute("data-filter");
-      // Redirect with filter query
+      const filterValue = area.getAttribute("data-filter");
       window.location.href = `courses.html?filter=${filterValue}`;
     });
   });
-});
-//form validation and saving to local storage 
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-  e.preventDefault();
 
-  let name = document.getElementById("name").value.trim();
-  let email = document.getElementById("email").value.trim();
-  let subject = document.getElementById("subject").value.trim();
-  let message = document.getElementById("message").value.trim();
+  // course filter
+  const filterBtns = document.querySelectorAll('.cat-btn');
+  const courseCards = document.querySelectorAll('.course-card');
 
-  
-  let nameError = document.getElementById("nameError");
-  let emailError = document.getElementById("emailError");
-  let subjectError = document.getElementById("subjectError");
-  let messageError = document.getElementById("messageError");
-  let success = document.getElementById("success");
+  if (filterBtns.length > 0) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialFilter = urlParams.get("filter") || "all";
+    applyFilter(initialFilter);
 
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', function () {
+        applyFilter(this.getAttribute('data-filter'));
+      });
+    });
 
-  nameError.textContent = "";
-  emailError.textContent = "";
-  subjectError.textContent = "";
-  messageError.textContent = "";
-  success.textContent = "";
-
-  let valid = true;
-
-  if (!name) {
-    nameError.textContent = "Name is required.";
-    valid = false;
-  }
-
-  if (!email) {
-    emailError.textContent = "Email is required.";
-    valid = false;
-  } else {
-    let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/;
-    if (!email.match(emailPattern)) {
-      emailError.textContent = "Invalid email format.";
-      valid = false;
+    function applyFilter(filter) {
+      filterBtns.forEach(b => {
+        b.classList.remove('active-filter');
+        if (b.getAttribute('data-filter') === filter) {
+          b.classList.add('active-filter');
+        }
+      });
+      courseCards.forEach(card => {
+        card.style.display = (filter === 'all' || card.getAttribute('data-category') === filter)
+          ? 'block' : 'none';
+      });
     }
   }
 
-  if (!subject) {
-    subjectError.textContent = "Subject is required.";
-    valid = false;
+  //contact form validation and storage
+  const contactForm = document.getElementById("contactForm");
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      let name = document.getElementById("name").value.trim();
+      let email = document.getElementById("email").value.trim();
+      let subject = document.getElementById("subject").value.trim();
+      let message = document.getElementById("message").value.trim();
+
+      document.getElementById("nameError").textContent = "";
+      document.getElementById("emailError").textContent = "";
+      document.getElementById("subjectError").textContent = "";
+      document.getElementById("messageError").textContent = "";
+      document.getElementById("success").textContent = "";
+
+      let valid = true;
+      if (!name) { document.getElementById("nameError").textContent = "Name is required."; valid = false; }
+      if (!email) { document.getElementById("emailError").textContent = "Email is required."; valid = false; }
+      else if (!/^[^ ]+@[^ ]+\.[a-z]{2,}$/.test(email)) { document.getElementById("emailError").textContent = "Invalid email format."; valid = false; }
+      if (!subject) { document.getElementById("subjectError").textContent = "Subject is required."; valid = false; }
+      if (!message) { document.getElementById("messageError").textContent = "Message is required."; valid = false; }
+      if (valid) {
+        document.getElementById("success").textContent = "Message sent successfully!";
+        contactForm.reset();
+      }
+    });
   }
-  if (!message) {
-    messageError.textContent = "Message is required.";
-    valid = false;
-  }
-  if (valid) {
-    success.textContent = "Message sent successfully!";
-    document.getElementById("contactForm").reset();
-  }
+
 });
 
-//js faq
-function showAlert() {
-    document.getElementById("faqModal").style.visibility = "visible";
-}
+//faq modal
+function showAlert() { document.getElementById("faqModal").style.visibility = "visible"; }
+function closeModal() { document.getElementById("faqModal").style.visibility = "hidden"; }
 
-function closeModal() {
-    document.getElementById("faqModal").style.visibility = "hidden";
-}
-
-window.onclick = function(event) {
-    var modal = document.getElementById("faqModal");
-    if (event.target == modal) {
-        modal.style.visibility = "hidden";
-    }
-}
-
-//js page el resources
-
+//audio
 function toggleAudio(btn) {
-    const audio = document.getElementById('podcast-audio');
-    const icon = btn.querySelector('svg path');
-
-    if (audio.paused) {
-        audio.play();
-       
-        icon.setAttribute('d', 'M6 19h4V5H6v14zm8-14v14h4V5h-4z');
-    } else {
-        audio.pause();
-       
-        icon.setAttribute('d', 'M8 5v14l11-7z');
-    }
+  const audio = document.getElementById('podcast-audio');
+  const icon = btn.querySelector('svg path');
+  if (audio.paused) {
+    audio.play();
+    icon.setAttribute('d', 'M6 19h4V5H6v14zm8-14v14h4V5h-4z');
+  } else {
+    audio.pause();
+    icon.setAttribute('d', 'M8 5v14l11-7z');
+  }
 }
+
+//video modal
 function playVideo(videoPath) {
   const modal = document.getElementById('videoModal');
-  const videoPlayer = document.getElementById('myVideo'); 
+  const videoPlayer = document.getElementById('myVideo');
   if (!modal || !videoPlayer) return;
-
-  let embedUrl = videoPath.replace("watch?v=", "embed/");
-
-  
-  videoPlayer.src = embedUrl + "?autoplay=1"; 
-  
- 
+  videoPlayer.src = videoPath.replace("watch?v=", "embed/") + "?autoplay=1";
   modal.style.display = 'flex';
 }
 
@@ -129,54 +113,13 @@ function closeVideo() {
   const modal = document.getElementById('videoModal');
   const videoPlayer = document.getElementById('myVideo');
   if (!modal) return;
-
   modal.style.display = 'none';
-
-  videoPlayer.src = ""; 
+  videoPlayer.src = "";
 }
 
-
-window.onclick = function(event) {
-  const modal = document.getElementById('videoModal');
-  if (event.target == modal) {
-    closeVideo();
-  }
-} 
-//filter el category fl course page
-document.addEventListener("DOMContentLoaded", function () {
-  const filterBtns = document.querySelectorAll('.cat-btn');
-  const cards = document.querySelectorAll('.course-card');
-
-  const urlParams = new URLSearchParams(window.location.search);
-  const initialFilter = urlParams.get("filter") || "all";
-
-  applyFilter(initialFilter);
-
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', function () {
-      filterBtns.forEach(b => b.classList.remove('active-filter'));
-      this.classList.add('active-filter');
-      const filter = this.getAttribute('data-filter');
-      applyFilter(filter);
-    });
-  });
-
-  function applyFilter(filter) {
-    
-    filterBtns.forEach(b => {
-      b.classList.remove('active-filter');
-      if (b.getAttribute('data-filter') === filter) {
-        b.classList.add('active-filter');
-      }
-    });
-
-   
-    cards.forEach(card => {
-      if (filter === 'all' || card.getAttribute('data-category') === filter) {
-        card.style.display = 'block';
-      } else {
-        card.style.display = 'none';
-      }
-    });
-  }
-});
+window.onclick = function (event) {
+  const videoModal = document.getElementById('videoModal');
+  const faqModal = document.getElementById('faqModal');
+  if (videoModal && event.target == videoModal) closeVideo();
+  if (faqModal && event.target == faqModal) faqModal.style.visibility = "hidden";
+}
