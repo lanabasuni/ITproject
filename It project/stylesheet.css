@@ -391,7 +391,15 @@ input, textarea {
   gap: 20px;
   width: 350px;
   text-align: center;
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
+
+.cards-dash:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 20px var(--foreground); 
+}
+
 .cardscontainer-dash {
   display: flex;
   gap: 20px;            
@@ -707,6 +715,7 @@ tbody tr:hover {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  color: var(--foreground);
 }
 
 .card-header {
