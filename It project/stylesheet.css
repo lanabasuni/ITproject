@@ -398,7 +398,7 @@ input:focus, textarea:focus {
 }
 
 .headtext-dash {
-    margin-left: 20px;
+    margin-left: 50px;
     padding-top: 75px; 
     padding-bottom: 5px;
     background-color: var(--background);
