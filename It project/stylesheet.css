@@ -1118,7 +1118,7 @@ tbody tr:hover {
   border-radius: 12px;
   width: 220px;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 6px var(--muted);
   border: 1px solid rgba(0,0,0,0.05);
 }
 
@@ -1176,6 +1176,7 @@ tbody tr:hover {
   padding: 40px 20px;
   border-radius: 15px;
   border: 1px solid var(--border);
+  box-shadow: 0 4px 6px var(--muted);
   transition: transform 0.2s;
 }
 

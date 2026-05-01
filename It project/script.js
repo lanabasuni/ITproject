@@ -11,6 +11,18 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("theme", isDark ? "dark" : "light");
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".featured-catg .card");
+
+  cards.forEach(card => {
+    card.addEventListener("click", e => {
+      e.preventDefault();
+      const filterValue = card.getAttribute("data-filter");
+      // Redirect with filter query
+      window.location.href = `courses.html?filter=${filterValue}`;
+    });
+  });
+});
 function showAlert() {
     document.getElementById("faqModal").style.visibility = "visible";
 }
@@ -76,23 +88,42 @@ window.onclick = function(event) {
 } 
 // ── Category Filter ──
 document.addEventListener("DOMContentLoaded", function () {
-    const filterBtns = document.querySelectorAll('.cat-btn');
-    const cards = document.querySelectorAll('.course-card');
+  const filterBtns = document.querySelectorAll('.cat-btn');
+  const cards = document.querySelectorAll('.course-card');
 
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', function () {
-            filterBtns.forEach(b => b.classList.remove('active-filter'));
-            this.classList.add('active-filter');
+  // Read filter from URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const initialFilter = urlParams.get("filter") || "all";
 
-            const filter = this.getAttribute('data-filter');
+  // Apply initial filter
+  applyFilter(initialFilter);
 
-            cards.forEach(card => {
-                if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        });
+  // Button clicks
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', function () {
+      filterBtns.forEach(b => b.classList.remove('active-filter'));
+      this.classList.add('active-filter');
+      const filter = this.getAttribute('data-filter');
+      applyFilter(filter);
     });
+  });
+
+  function applyFilter(filter) {
+    // Highlight correct button
+    filterBtns.forEach(b => {
+      b.classList.remove('active-filter');
+      if (b.getAttribute('data-filter') === filter) {
+        b.classList.add('active-filter');
+      }
+    });
+
+    // Show/hide cards
+    cards.forEach(card => {
+      if (filter === 'all' || card.getAttribute('data-category') === filter) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
 });
