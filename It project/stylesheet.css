@@ -564,7 +564,7 @@ input, textarea {
 }
 /* schedule css */
 
-/* PAGE TITLE */
+
 .name {
   margin-top: 80px;
   padding: 24px 40px 8px;
@@ -576,7 +576,6 @@ input, textarea {
   color: var(--foreground);
 }
 
-/* dark mode: push content right bec nav becomes a sidebar */
 .dark .name {
   margin-left: 200px;
 }
@@ -589,7 +588,7 @@ input, textarea {
   margin-left: 240px;
 }
 
-/* SCHEDULE */
+
 #scheduletable {
   margin: 20px 40px;
   background: var(--card);
@@ -644,7 +643,6 @@ tbody tr:hover {
   background-color: var(--secondary);
 }
 
-/* EVENTS SECTION */
 #events-kolha {
   margin: 20px 40px 40px;
   background: var(--card);
@@ -702,7 +700,7 @@ tbody tr:hover {
 /* schedule css end */
 
 
-/*============================Recources css/*============================*/
+/*resources css*/
 .Recources-Main {
   padding: 80px 40px 40px;
   max-width: 1300px;
@@ -714,7 +712,7 @@ tbody tr:hover {
   margin-bottom: 30px;
 }
 
-/* ── Top Media Cards Grid ── */
+
 .main-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -722,7 +720,7 @@ tbody tr:hover {
   margin-bottom: 30px;
 }
 
-/* ── Video Card & Audio Card base ── */
+
 .video-card,
 .Audio-card {
   background: var(--card);
@@ -746,7 +744,6 @@ tbody tr:hover {
   unicode-bidi: isolate;
 }
 
-/* ── Video Thumb (iframe) ── */
 .video-thumb {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -760,7 +757,6 @@ tbody tr:hover {
   display: block;
 }
 
-/* ── Audio Thumb ── */
 .Audio-thumb {
     width: 100%;
     aspect-ratio: 16 / 9;
@@ -794,7 +790,7 @@ tbody tr:hover {
   width: 100%;
 }
 
-/* ── Card Text ── */
+
 .card-title {
   font-size: 15px;
   font-weight: 600;
@@ -810,7 +806,7 @@ tbody tr:hover {
   margin: 0;
 }
 
-/* ── Additional Video Resources ── */
+
 .additional-videos {
   background: var(--card);
   border: 1px solid var(--border);
@@ -842,7 +838,6 @@ tbody tr:hover {
     width: 100%;
     aspect-ratio: 16 / 9;
     border-radius: 10px;
-    /* background: linear-gradient(135deg, #a8c0f0, #7baee8, #6a8de0); fallback if image missing */
     background-size: cover;
     background-position: center;
     display: block;
@@ -867,7 +862,7 @@ tbody tr:hover {
   margin: 0;
 }
 
-/* ── Downloadable Resources ── */
+
 .downloadable-resources {
   background: var(--card);
   border: 1px solid var(--border);
@@ -908,7 +903,7 @@ tbody tr:hover {
   font-size: 14px;
   color: var(--foreground);
 }
-/*css kareem*/
+/*css course*/
 
 
 
@@ -920,7 +915,7 @@ tbody tr:hover {
 }
 
 .courses-main h1 {
-    color: var(--foreground); /* was --primary-foreground */
+    color: var(--foreground);
     text-align: center;
     margin: 0;
     padding-top: 40px;
@@ -1061,7 +1056,6 @@ tbody tr:hover {
     height: 100%;
     background: rgba(0,0,0,0.3);
     backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px); /* Safari support */
     justify-content: center;
     align-items: center;
 }
@@ -1085,7 +1079,7 @@ tbody tr:hover {
     font-size: 30px;
     cursor: pointer;
 }
-
+/* about css */
 .hero {
   background: linear-gradient(130deg,var(--secondary),var(--primary));
   color: var(--primary-foreground);

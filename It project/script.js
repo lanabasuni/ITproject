@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("theme", isDark ? "dark" : "light");
   });
 });
+//home page categories cards
 document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".featured-catg .card");
 
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+//js faq
 function showAlert() {
     document.getElementById("faqModal").style.visibility = "visible";
 }
@@ -38,17 +40,19 @@ window.onclick = function(event) {
     }
 }
 
+//js page el resources
+
 function toggleAudio(btn) {
     const audio = document.getElementById('podcast-audio');
     const icon = btn.querySelector('svg path');
 
     if (audio.paused) {
         audio.play();
-        // Switch to pause icon
+       
         icon.setAttribute('d', 'M6 19h4V5H6v14zm8-14v14h4V5h-4z');
     } else {
         audio.pause();
-        // Switch back to play icon
+       
         icon.setAttribute('d', 'M8 5v14l11-7z');
     }
 }
@@ -57,14 +61,13 @@ function playVideo(videoPath) {
   const videoPlayer = document.getElementById('myVideo'); 
   if (!modal || !videoPlayer) return;
 
-  // 1. Convert the standard link to an embed link
-  // This changes 'watch?v=ID' to 'embed/ID'
+  '
   let embedUrl = videoPath.replace("watch?v=", "embed/");
 
-  // 2. Set the source with autoplay enabled
+  
   videoPlayer.src = embedUrl + "?autoplay=1"; 
   
-  // 3. Show the modal
+ 
   modal.style.display = 'flex';
 }
 
@@ -75,30 +78,26 @@ function closeVideo() {
 
   modal.style.display = 'none';
 
-  // 4. Reset the src to stop the video/audio immediately
   videoPlayer.src = ""; 
 }
 
-// Close modal if user clicks outside of it
+
 window.onclick = function(event) {
   const modal = document.getElementById('videoModal');
   if (event.target == modal) {
     closeVideo();
   }
 } 
-// ── Category Filter ──
+//filter el category fl course page
 document.addEventListener("DOMContentLoaded", function () {
   const filterBtns = document.querySelectorAll('.cat-btn');
   const cards = document.querySelectorAll('.course-card');
 
-  // Read filter from URL
   const urlParams = new URLSearchParams(window.location.search);
   const initialFilter = urlParams.get("filter") || "all";
 
-  // Apply initial filter
   applyFilter(initialFilter);
 
-  // Button clicks
   filterBtns.forEach(btn => {
     btn.addEventListener('click', function () {
       filterBtns.forEach(b => b.classList.remove('active-filter'));
@@ -109,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function applyFilter(filter) {
-    // Highlight correct button
+    
     filterBtns.forEach(b => {
       b.classList.remove('active-filter');
       if (b.getAttribute('data-filter') === filter) {
@@ -117,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // Show/hide cards
+   
     cards.forEach(card => {
       if (filter === 'all' || card.getAttribute('data-category') === filter) {
         card.style.display = 'block';
