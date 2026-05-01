@@ -261,7 +261,7 @@ nav .logo {
 }
 
 /*code farah*/
-form {
+#contactform {
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -1250,4 +1250,78 @@ tbody tr:hover {
 .contact-info li {
     color: #cccccc;
     font-size: 0.95rem;
+}
+/*css login page*/
+
+
+.login-main {
+  background-color: var(--secondary);
+}
+
+
+.login-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+}
+
+.login-box {
+  width: 420px;
+  background: var(--card);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.08);
+}
+
+.login-box h1 {
+  color:var(--primary);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.login-box p {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 30px;
+}
+
+#loginForm label {
+  color: var(--foreground);
+  display: block;
+  padding:10px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+#loginForm input {
+  background-color: var(--background);
+  color: var(--foreground);
+  width: 100%;            
+  padding: 20px;          
+  border: 1px solid var(--border); 
+  border-radius: 8px;     
+  box-sizing: border-box;
+  font-size: 14px;
+}
+#loginForm input:focus {
+    outline: none;
+    border-color: var(--primary); 
+    background-color: var(--background);
+}
+
+#loginForm button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(60deg,var(--secondary),var(--primary));
+  color: var(--foreground);
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#loginForm button:hover {
+  transition: 0.8s;
+  background: linear-gradient(60deg,var(--primary),var(--secondary));
 }
