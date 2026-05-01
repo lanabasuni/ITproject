@@ -30,6 +30,7 @@
   /* Sidebar specific */
   --sidebar:#0f0f0f;
   --sidebar-primary: #3b82f6;
+  transition: background-color 0.3s, color 0.3s;
 }
 body {
   font-family: 'Inter', sans-serif;
@@ -105,15 +106,15 @@ nav .logo {
   font-weight: bold;
 }
 .imagemap {
-    display: flex;
-    justify-content: center; 
+    
     width: 100%;               
 }
 
 .imagemap img {
-    width: 1000px;
+    width: 100%;
     height: auto;
     display: block;
+  
 }
 
 .logo-icon {
@@ -221,7 +222,7 @@ nav .logo {
   max-width: 1000px;
   margin: 70px auto;
 }
-.card {
+.cards .card {
   background: var(--card);
   color: var(--foreground);
   padding: 25px;
@@ -230,7 +231,7 @@ nav .logo {
   text-align: center;
   transition: transform 0.2s ease;
 }
-.card:hover{
+.cards .card:hover{
    transform: translateY(-5px);
    transition: 0.6s;
 }
@@ -250,16 +251,15 @@ nav .logo {
 }
 .featured-catg{
   margin:0px 0px;
-  padding:70px;
+  padding:0px;
   background-color: var(--secondary);
 }
 .featured-catg h3{
+  padding:20px;
   font-weight:500;
   font-size:25px;
 }
-.featured-catg .cards{
-  grid-template-columns: repeat(3, 1fr);
-}
+
 /*code farah*/
 form {
   padding: 20px;
@@ -467,6 +467,7 @@ input:focus, textarea:focus {
   margin-top: 0;
   color: var(--foreground);
   margin-top: 20px;
+  
 }
 
 .courses-dash {
@@ -477,6 +478,7 @@ input:focus, textarea:focus {
   padding-bottom: 15px;  
   margin-left: 15px;
   margin-right: 15px;
+  margin-bottom: 20px;
   padding-left: 15px;
   padding-right: 15px;
   color: var(--foreground);
