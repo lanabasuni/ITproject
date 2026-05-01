@@ -104,6 +104,17 @@ nav .logo {
   font-size: 30px;
   font-weight: bold;
 }
+.imagemap {
+    display: flex;
+    justify-content: center; 
+    width: 100%;               
+}
+
+.imagemap img {
+    width: 1000px;
+    height: auto;
+    display: block;
+}
 
 .logo-icon {
   width: 36px;
