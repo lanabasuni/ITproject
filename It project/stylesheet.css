@@ -107,14 +107,14 @@ nav .logo {
 }
 .imagemap {
     
-    width: 100%;               
+    width: 100%; 
+    height: auto;              
 }
 
 .imagemap img {
     width: 100%;
     height: auto;
-    display: block;
-  
+    display: flex;
 }
 
 .logo-icon {
