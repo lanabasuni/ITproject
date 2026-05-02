@@ -123,3 +123,18 @@ window.onclick = function (event) {
   if (videoModal && event.target == videoModal) closeVideo();
   if (faqModal && event.target == faqModal) faqModal.style.visibility = "hidden";
 }
+
+//3ashan elimagemap
+window.addEventListener('load', () => {
+  const img = document.querySelector('img[usemap="#eduhub-map"]');
+
+  const observer = new ResizeObserver(() => {
+    imageMapResize();
+  });
+
+  observer.observe(img);
+});
+
+function toggleTheme() {
+  document.body.classList.toggle('light');
+}
