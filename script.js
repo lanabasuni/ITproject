@@ -138,3 +138,122 @@ window.addEventListener('load', () => {
 function toggleTheme() {
   document.body.classList.toggle('light');
 }
+
+
+// js el signup
+let signupForm = document.getElementById("Signupform");
+
+if (signupForm) {
+  signupForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let name = document.getElementById("Name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let password = document.getElementById("password").value.trim();
+    let confirmPassword = document.getElementById("confirmpassword").value.trim();
+
+    let nameError = document.getElementById("nameError");
+    let emailError = document.getElementById("emailError");
+    let passError = document.getElementById("passError");
+    let confirmError = document.getElementById("confirmError");
+
+    nameError.textContent = "";
+    emailError.textContent = "";
+    passError.textContent = "";
+    confirmError.textContent = "";
+
+    let isValid = true;
+
+    let namePattern = /^[A-Za-z ]+$/;
+    if (name === "") {
+      nameError.textContent = "Name is required";
+      isValid = false;
+    } else if (name.length < 3) {
+      nameError.textContent = "At least 3 characters";
+      isValid = false;
+    } else if (!name.match(namePattern)) {
+      nameError.textContent = "Only letters allowed";
+      isValid = false;
+    }
+
+    let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (email === "") {
+      emailError.textContent = "Email is required";
+      isValid = false;
+    } else if (!email.match(emailPattern)) {
+      emailError.textContent = "Invalid email";
+      isValid = false;
+    }
+
+    if (password === "") {
+      passError.textContent = "Password required";
+      isValid = false;
+    } else if (password.length < 6) {
+      passError.textContent = "Min 6 chars";
+      isValid = false;
+    }
+
+    if (confirmPassword === "") {
+      confirmError.textContent = "Confirm password";
+      isValid = false;
+    } else if (password !== confirmPassword) {
+      confirmError.textContent = "Passwords don't match";
+      isValid = false;
+    }
+
+    if (isValid) {
+      localStorage.setItem("userEmail", email);
+      localStorage.setItem("userPassword", password);
+
+      alert("Signup successful!");
+      window.location.href = "login.html";
+    }
+  });
+}
+
+
+// js el login
+let loginForm = document.getElementById("loginForm");
+
+if (loginForm) {
+  loginForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let email = document.getElementById("email").value.trim();
+    let password = document.getElementById("password").value.trim();
+
+    let emailError = document.getElementById("emailError");
+    let passError = document.getElementById("passError");
+
+    emailError.textContent = "";
+    passError.textContent = "";
+
+    let isValid = true;
+
+    let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+    if (email === "") {
+      emailError.textContent = "Email required";
+      isValid = false;
+    } else if (!email.match(emailPattern)) {
+      emailError.textContent = "Invalid email";
+      isValid = false;
+    }
+
+    if (password === "") {
+      passError.textContent = "Password required";
+      isValid = false;
+    }
+
+    if (!isValid) return;
+
+    let storedEmail = localStorage.getItem("userEmail");
+    let storedPassword = localStorage.getItem("userPassword");
+
+    if (email === storedEmail && password === storedPassword) {
+      alert("Login successful!");
+    } else {
+      passError.textContent = "Invalid email or password";
+    }
+  });
+}
