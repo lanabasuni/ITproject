@@ -1432,7 +1432,7 @@ tbody tr:hover {
   transition: transform 0.2s ease;
   max-width: 400px;
   width: 100%;
-  margin-top:-30px;
+  margin-top:-50px;
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -1444,7 +1444,7 @@ tbody tr:hover {
 }
 
 .signupcardheader{
-  padding-top: 15px;
+  padding-top: -15px;
   padding-bottom: 0;
 }
 
