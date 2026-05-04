@@ -252,8 +252,9 @@ if (loginForm) {
 
     if (email === storedEmail && password === storedPassword) {
       alert("Login successful!");
+      window.location.href = "index.html"; 
     } else {
       passError.textContent = "Invalid email or password";
-    }
+    }  
   });
 }
