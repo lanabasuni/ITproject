@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+  <script>
+  if (localStorage.getItem("theme") === "dark") {
+    document.documentElement.classList.add("dark");
+  }
+</script>
+    <head>
+        <title>EduHub</title>
+        <link rel="stylesheet" href="stylesheet.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+    <nav>
+        <div class="logo">
+                 <img src="media/logo.png" alt="EduHub Logo" class="logo-icon"/>
+                 EduHub
+            </div>
+        <ul type="none">
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="schedule.html"class="active">Schedule</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li>
+               <button id="theme-toggle" class="toggletheme">
+                 <img src="media/themes.png"/>
+               </button>
+            </li>
+            </ul>
+    </nav>
+    <div class="all-schedule">
+       <div class="name">
+    <h1>Class Schedule &amp; Timetable</h1>
+   </div>
+
+    <!-- Weekly Schedule -->
+    <div id="scheduletable">
+      <h2>  
+        <span><img class="logo-schedule" src="https://x02.me/i/YVQV5.jpg"></span>
+        <style>
+          .name{margin-top: 70px;}
+          #scheduletable h2{
+            display: flex;
+            align-items: center;
+          }
+        img.logo { 
+          width: 30px; height: 30px; margin-top: 4px;
+        }
+         </style>
+        Weekly Class Schedule</h2>
+      <table border="1" cellpadding="8" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Time</th>
+            <th>Course</th>
+            <th>Instructor</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Saturday</td>
+            <td>09:00 - 11:00</td>
+            <td>Front-End Web Development</td>
+            <td>Dr. Amr Khaled</td>
+            <td>Virtual Room A</td>
+          </tr>
+          <tr>
+            <td>Saturday</td>
+            <td>12:00 - 14:00</td>
+            <td>Data Analysis Professional</td>
+            <td>Prof. Hossam Ahmed</td>
+            <td>Virtual Room B</td>
+          </tr>
+          <tr>
+            <td>Saturday</td>
+            <td>15:00 - 17:00</td>
+            <td>DevOps course</td>
+            <td>ENG. Adham osama</td>
+            <td>Virtual Room C</td>
+          </tr>
+          <tr>
+            <td>Sunday</td>
+            <td>09:00 - 11:00</td>
+            <td>Ethical Hacking course</td>
+            <td>ENG. Farah Gamal</td>
+            <td>Virtual Room A</td>
+          </tr>
+          <tr>
+            <td>Sunday</td>
+            <td>12:00 - 14:00</td>
+            <td>Network Security Fundamentals</td>
+            <td>ENG. Mohamed Nabil</td>
+            <td>Virtual Room B</td>
+          </tr>
+          <tr>
+            <td>Sunday</td>
+            <td>15:00 - 17:00</td>
+            <td>Digital Forensics & Investigation</td>
+            <td>Dr. Hany Farouk</td>
+            <td>Virtual Room B</td>
+          </tr>
+          <tr>
+            <td>Monday</td>
+            <td>09:00 - 11:00</td>
+            <td>Business Mangment Fundementals</td>
+            <td>Prof. Sara Mahmoud</td>
+            <td>Virtual Room B</td>
+          </tr>
+          <tr>
+            <td>Monday</td>
+            <td>12:00 - 14:00</td>
+            <td>Video Editing Masterclass</td>
+            <td>Prof. Lana Ahmed</td>
+            <td>Virtual Room B</td>
+          </tr>
+          <tr>
+            <td>Monday</td>
+            <td>15:00 - 17:00</td>
+            <td>Cloud Computing with AWS</td>
+            <td>ENG. Youssef Ali</td>
+            <td>Virtual Room B</td>
+          </tr>
+          <tr>
+            <td>Tuesday</td>
+            <td>09:00 - 11:00</td>
+            <td>UI/UX Design Essentials</td>
+            <td>Dr. Mariem Ahmed</td>
+            <td>Virtual Room B</td>
+          </tr>
+          <tr>
+            <td>Tuesday</td>
+            <td>12:00 - 14:00</td>
+            <td>Financial Accounting Basics</td>
+            <td>Dr. Amr Ahmed</td>
+            <td>Virtual Room B</td>
+          </tr>
+          <tr>
+            <td>Tuesday</td>
+            <td>15:00 - 17:00</td>
+            <td>Graphic Design Masterclass</td>
+            <td>Dr. Omar Mohamed Salah</td>
+            <td>Virtual Room D</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>09:00 - 11:00</td>
+            <td>Embedded Systems Programming</td>
+            <td>Prof. Mohamed Shafei</td>
+            <td>Virtual Room A</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>12:00 - 14:00</td>
+            <td>Python for Beginners</td>
+            <td>Dr. Ahmed Samy</td>
+            <td>Virtual Room B</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>15:00 - 17:00</td>
+            <td>Digital Marketing </td>
+            <td>Mohamed Ahmed</td>
+            <td>Virtual Room C</td>
+          </tr>
+          <tr>
+            <td>Thursday</td>
+            <td>13:00 - 15:00</td>
+            <td>Office Hours - All Instructors</td>
+            <td>Various</td>
+            <td>All Rooms</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Upcoming Events -->
+    <div id="events-kolha">
+      <h2>Upcoming Events</h2>
+
+      <div class="event">
+        <div>
+          <h3>Guest Lecture: Future of AI</h3>
+          <p>Speaker: Dr. Seif Abdullah</p>
+        </div>
+        <span>April 25, 2026</span>
+      </div>
+
+      <div class="event">
+        <div>
+          <h3>Workshop: Resume Building</h3>
+          <p>Speaker: Career Services</p>
+        </div>
+        <span>April 28, 2026</span>
+      </div>
+
+      <div class="event">
+        <div>
+          <h3>Networking Event</h3>
+          <p>Speaker: Alumni Association</p>
+        </div>
+        <span>May 2, 2026</span>
+      </div>
+
+      <div class="event">
+        <div>
+          <h3>Mid-term Examinations Begin</h3>
+          <p>Speaker: Academic Affairs</p>
+        </div>
+        <span>May 5, 2026</span>
+      </div>
+    </div>
+  </div>
+     <footer>
+             <hr class="footerhr">
+            <div class="footerst">
+              <div class="footerhead">
+                <h2>
+                  <img class="logo-foot" src="media/footer-logo.png" alt="EduHUb">
+                  EduHub
+                </h2>
+                <p>
+                    Empowering learners worldwide with quality education and expert instruction. Start your journey today
+                </p>
+               </div>
+                <div class="footer-nav">
+                    <h3>Quick Links</h3>
+                    <ul type="none">
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="login.html">Login</a></li>
+           
+            </ul>
+                </div>
+                <div class="contactinfo-dash">
+                    <h3>Contact Info.</h3>
+                    <p>📩support@eduhub.com</p>
+                    <p>📞+201094193970</p>  
+                   <P>📍Road 153 , Maadi city Egypt</P>   
+                </div>
+               <p class="footerfoot">© 2026 EduHub. All rights reserved.</p>
+            </div>
+        </footer>
+    </body>
+</html>

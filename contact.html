@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <script>
+  if (localStorage.getItem("theme") === "dark") {
+    document.documentElement.classList.add("dark");
+  }
+</script>
+    <head>
+        <title>EduHub</title>
+        <link rel="stylesheet" href="stylesheet.css">
+        
+    </head>
+    <body>
+    <nav>
+       <div class="logo">
+                 <img src="media/logo.png" alt="EduHub Logo" class="logo-icon"/>
+                 EduHub
+            </div>
+        <ul type="none">
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="contact.html"class="active">Contact us</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li>
+               <button id="theme-toggle" class="toggletheme">
+                 <img src="media/themes.png"/>
+               </button>
+            </li>
+            </ul>
+    </nav>
+    <main class="contact-main">
+    <h1 class="pop">Contact Us</h1>
+    <h3 class="x">Have questions ? We'd love to hear from you.Send us a message and we'll respond as soon as possible.</h3>
+     <form id="contactForm">
+  <label>Your Name</label>
+  <input type="text" id="name" placeholder="Enter your name">
+  <span class="error" id="nameError"></span>
+
+  <label>Email Address</label>
+  <input type="text" id="email" placeholder="farah@example.com">
+  <span class="error" id="emailError"></span>
+
+  <label>Subject</label>
+  <input type="text" id="subject" placeholder="How can we help you?">
+  <span class="error" id="subjectError"></span>
+
+  <label>Message</label>
+  <textarea id="message" rows="6" placeholder="Your message here.."></textarea>
+  <span class="error" id="messageError"></span>
+
+  <button type="submit">Send Message</button>
+  </form>
+   <p id="success" style="color: rgb(131, 206, 131); font-weight: bold;"></p>
+
+
+    <div class="info">
+        <h4 class="x">Contact Information</h4>
+        <p class="x">📩support@eduhub.com</p>
+        <p class="x">📞+201094193970</p>
+        <p class="x">📍Road 153 , Maadi city Egypt</p>
+    </div>
+    <div class="info">
+     <h4 class="x">Office Hours</h4>
+    <p class="x">Monday - Friday: 9:00 AM - 6:00 PM</p>
+    <p class="x">Saturday: 10:00 AM - 4:00 PM</p>
+    <p class="x">Sunday: Closed</p>
+    </div>
+    <div class="info">
+        <h4 class="x">FAQ</h4>
+        <p class="x">Before contacting us,check our FAQ.</p>
+        <button onclick="showAlert()">View FAQ</button>
+    </div>
+    </main>
+    <div id="faqModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h3>Frequently Asked Questions</h3>
+    
+    <p><b>Q: How to join a course?</b><br>
+    A: Just click on the course and press enroll!</p>
+    <hr>
+    
+    <p><b>Q: Do I get a certificate after finishing?</b><br>
+    A: Yes, you will receive a digital certificate for every course you complete.</p>
+    <hr>
+    
+    <p><b>Q: How can I contact my instructor?</b><br>
+    A: You can send a direct message to your teacher through the "Courses" dashboard.</p>
+    
+  </div>
+</div>
+<footer>
+             <hr class="footerhr">
+            <div class="footerst">
+              <div class="footerhead">
+                <h2>
+                  <img class="logo-foot" src="media/footer-logo.png" alt="EduHUb">
+                  EduHub
+                </h2>
+                <p>
+                    Empowering learners worldwide with quality education and expert instruction. Start your journey today
+                </p>
+               </div>
+                <div class="footer-nav">
+                    <h3>Quick Links</h3>
+                    <ul type="none">
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="login.html">Login</a></li>
+           
+            </ul>
+                </div>
+                <div class="contactinfo-dash">
+                    <h3>Contact Info.</h3>
+                    <p>📩support@eduhub.com</p>
+                    <p>📞+201094193970</p>  
+                    <P>📍Road 153 , Maadi city Egypt</P>   
+                </div>
+               <p class="footerfoot">© 2026 EduHub. All rights reserved.</p>
+            </div>
+        </footer>
+ <script src="script.js"></script>
+    </body>
+</html> 

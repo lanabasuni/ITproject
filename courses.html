@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+    <script>
+  if (localStorage.getItem("theme") === "dark") {
+    document.documentElement.classList.add("dark");
+  }
+</script>
+    <head>
+        <title>EduHub</title>
+        <link rel="stylesheet" href="stylesheet.css">
+    </head>
+    <body class="courses-body">
+        <header>
+               <nav>
+                 <div class="logo">
+                 <img src="media/logo.png" alt="EduHub Logo" class="logo-icon"/>
+                 EduHub
+                 </div>
+                  <ul type="none">
+                             <li><a href="index.html">Home</a></li>
+                             <li><a href="courses.html" class="active">Courses</a></li>
+                              <li><a href="resources.html">Resources</a></li>
+                              <li><a href="schedule.html">Schedule</a></li>
+                             <li><a href="dashboard.html">Dashboard</a></li>
+                             <li><a href="contact.html">Contact us</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="login.html">Login</a></li>
+                             <li>
+                             <button id="theme-toggle" class="toggletheme">
+                             <img src="media/themes.png"/>
+                             </button>
+                             </li>
+                 </ul>
+                </nav>
+                </header>
+     <main class="courses-main">
+        <h1>Explore Our Courses</h1>
+
+    <div class="categories">
+    <span class="cat-btn active-filter" data-filter="all">All</span>
+    <span class="cat-btn" data-filter="programming">Programming</span>
+    <span class="cat-btn" data-filter="cybersecurity">Cybersecurity</span>
+    <span class="cat-btn" data-filter="engineering">Engineering</span>
+    <span class="cat-btn" data-filter="business">Business</span>
+    <span class="cat-btn" data-filter="design">Design</span>
+    </div>
+
+        <div class="courses-grid">
+            <div class="course-card" data-category="programming">
+                <div class="card-image img-1"><img src="media/courses/front.jpg" ></div>
+		
+                <div class="card-footer">
+                    <div class="footer-top">
+                        <span class="badge badge-blue">Programming</span>
+                     
+			<span class="price"><b>$99</b></span>
+			<span class="badge badge-blue">Dr. Amr Khaled</span>
+                    </div>
+			<h3>Front-End Web Development</h3>
+			<p class="coursedescription">Learn HTML, CSS, JavaScript and build responsive websites.</p>
+			
+                    <button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfvlcnOs6T')">Watch Intro</button>
+		              <a href="login_signup.html">
+                    <button type="button" class="watch-btn on">Enroll now</button>
+		            </a>
+		 </div>
+            </div>
+
+            <div class="course-card" data-category="programming">
+                <div class="card-image"><img src="media/courses/data.png" ></div>
+                <div class="card-footer">
+                    <div class="footer-top">
+                        <span class="badge badge-blue">Programming</span>
+                        <span class="price"><b>$149</b></span>
+			<span class="badge badge-blue">Prof. Hossam Ahmed</span>
+                    </div>
+	   	    <h3>Data Analysis Professional</h3>
+		    <p class="coursedescription">Learn Excel, SQL, Python and Power BI.</p>
+		  
+                    <button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfvXJnOsjG')">Watch Intro</button>
+		              <a href="login_signup.html">
+                    <button type="button" class="watch-btn on">Enroll now</button>
+		            </a>
+                </div>
+            </div>
+
+            <div class="course-card" data-category="business">
+                <div class="card-image"><img src="media/courses/marketing.jpg" ></div>
+                <div class="card-footer">
+                    <div class="footer-top">
+                        <span class="badge badge-blue">Business</span>
+                        <span class="price"><b>$79</b></span>
+			<span class="badge badge-blue">Mohamed Ahmed</span>
+                    </div>
+		    <h3>Digital Marketing Course</h3>
+		    <p class="coursedescription">Learn social media marketing and SEO professionally.</p>
+			
+                    <button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfvXEnOsjl')">Watch Intro</button>
+		    <a href="login_signup.html">
+    <button type="button" class="watch-btn on">Enroll now</button>
+		</a>
+                </div>
+            </div>
+		<div class="course-card" data-category="design">
+		     <div class="card-image"><img src="media/courses/design.webp" ></div>
+		     <div class="card-footer">
+		     <div class="footer-top">
+		  	 <span class="badge badge-blue">Design</span>
+		  	 <span class="price"><b>150$</b></span>
+			<span class="badge badge-blue">Dr. Omar Mohamed Salah</span>
+		</div>
+	      <h3>Graphic Design Masterclass</h3>
+	      <p class="coursedescription">A training program that qualifies you to transform ideas into creative visual elements, covering the basics of design (colors, composition, fonts) and professionalism in Adobe programs (Photoshop, Illustrator, InDesign).</p>
+	      <button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfvXpnOsi5')">Watch Intro</button>
+	      <a href="login.html">
+    <button type="button" class="watch-btn on">Enroll now</button>
+	</a>
+	</div>
+	</div>
+	
+	<div class="course-card" data-category="cybersecurity">
+		<div class="card-image"><img src="media/courses/hacking.webp" ></div>
+		<div class="card-footer">
+		<div class="footer-top">
+			<span class="badge badge-blue">Cybersecurity</span>
+			<span class="price"><b>200$</b></span>
+			<span class="badge badge-blue">ENG. Farah Gamal</span>
+    </div>
+			<h3>Ethical Hacking course</h3>
+			<p class="coursedescription">Discover and fix security vulnerabilities now before malicious hackers exploit themIt is a training program that aims to teach humans how to think and act like hackers.</p>
+			
+			<button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfv6LnOsV8')">Watch Intro</button>
+			<a href="login.html">
+    <button type="button" class="watch-btn on">Enroll now</button>
+</a>
+   </div>
+   </div>
+       
+   <div class="course-card" data-category="engineering">
+	<div class="card-image"><img src="media/courses/devops.jpg" ></div>
+	<div class="card-footer">
+	<div class="footer-top">
+		<span class="badge badge-blue">Engineering</span>
+		<span class="price"><b> 75$</b></span>
+		<span class="badge badge-blue">ENG. Adham osama</span>
+	</div>
+		<h3>DevOps course</h3>
+		<p class="coursedescription">An educational journey aimed at transforming you into someone who bridges the gap between the world of "building code" and the world of "running code"</p>
+		<button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfvXBnOsi2')">Watch Intro</button>
+		<a href="login_signup.html">
+    <button type="button" class="watch-btn on">Enroll now</button>
+</a>
+</div>
+</div>
+<!-- Programming -->
+<div class="course-card" data-category="programming">
+    <div class="card-image"><img src="media/courses/python.jpg"></div>
+    <div class="card-footer">
+        <div class="footer-top">
+            <span class="badge badge-blue">Programming</span>
+            <span class="price"><b>$120</b></span>
+            <span class="badge badge-blue">Dr. Ahmed Samy</span>
+        </div>
+        <h3>Python for Beginners</h3>
+        <p class="coursedescription">Learn Python from scratch, covering fundamentals, data structures, and real-world projects.</p>
+        <button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfvoVnOsCE')">Watch Intro</button>
+        <button class="watch-btn on" onclick="location.href='login_signup.html'">Enroll Now</button>
+    </div>
+</div>
+
+<!-- Business -->
+<div class="course-card" data-category="business">
+    <div class="card-image"><img src="media/courses/business.jpg"></div>
+    <div class="card-footer">
+        <div class="footer-top">
+            <span class="badge badge-blue">Business</span>
+            <span class="price"><b>$89</b></span>
+            <span class="badge badge-blue">Prof. Sara Mahmoud</span>
+        </div>
+        <h3>Business Management Fundamentals</h3>
+        <p class="coursedescription">Master the core principles of business management, leadership, and organizational strategy.</p>
+        <button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfvo4nOsdC')">Watch Intro</button>
+        <button class="watch-btn on" onclick="location.href='login_signup.html'">Enroll Now</button>
+    </div>
+</div>
+
+<div class="course-card" data-category="business">
+    <div class="card-image"><img src="media/courses/finance.jpg"></div>
+    <div class="card-footer">
+        <div class="footer-top">
+            <span class="badge badge-blue">Business</span>
+            <span class="price"><b>$99</b></span>
+            <span class="badge badge-blue">Dr. Amr Ahmed</span>
+        </div>
+        <h3>Financial Accounting Basics</h3>
+        <p class="coursedescription">Understand financial statements, bookkeeping, and accounting principles used in real businesses.</p>
+        <button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfvojnOsEh')">Watch Intro</button>
+        <button class="watch-btn on" onclick="location.href='login_signup.html'">Enroll Now</button>
+    </div>
+</div>
+
+<!-- Design -->
+<div class="course-card" data-category="design">
+    <div class="card-image"><img src="media/courses/uiux.webp"></div>
+    <div class="card-footer">
+        <div class="footer-top">
+            <span class="badge badge-blue">Design</span>
+            <span class="price"><b>$110</b></span>
+            <span class="badge badge-blue">Dr. Mariem Ahmed</span>
+        </div>
+        <h3>UI/UX Design Essentials</h3>
+        <p class="coursedescription">Learn user interface and experience design using Figma, wireframing, and prototyping techniques.</p>
+        <button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfvoBnOsK6')">Watch Intro</button>
+        <button class="watch-btn on" onclick="location.href='login_signup.html'">Enroll Now</button>
+    </div>
+</div>
+
+<div class="course-card" data-category="design">
+    <div class="card-image"><img src="media/courses/video.png"></div>
+    <div class="card-footer">
+        <div class="footer-top">
+            <span class="badge badge-blue">Design</span>
+            <span class="price"><b>$85</b></span>
+            <span class="badge badge-blue">Prof. Lana</span>
+        </div>
+        <h3>Video Editing Masterclass</h3>
+        <p class="coursedescription">Edit professional videos using Premiere Pro and After Effects from beginner to advanced level.</p>
+        <button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfvoonOsGY')">Watch Intro</button>
+        <button class="watch-btn on" onclick="location.href='login_signup.html'">Enroll Now</button>
+    </div>
+</div>
+
+<!-- Cybersecurity -->
+<div class="course-card" data-category="cybersecurity">
+    <div class="card-image"><img src="media/courses/network.jpg"></div>
+    <div class="card-footer">
+        <div class="footer-top">
+            <span class="badge badge-blue">Cybersecurity</span>
+            <span class="price"><b>$175</b></span>
+            <span class="badge badge-blue">ENG. Mohamed Nabil</span>
+        </div>
+        <h3>Network Security Fundamentals</h3>
+        <p class="coursedescription">Learn how to secure networks, detect intrusions, and protect systems from cyber threats.</p>
+        <button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfvoknOsKk')">Watch Intro </button>
+        <button class="watch-btn on" onclick="location.href='login_signup.html'">Enroll Now</button>
+    </div>
+</div>
+
+<div class="course-card" data-category="cybersecurity">
+    <div class="card-image"><img src="media/courses/forensics.jpg" ></div>
+    <div class="card-footer">
+        <div class="footer-top">
+            <span class="badge badge-blue">Cybersecurity</span>
+            <span class="price"><b>$190</b></span>
+            <span class="badge badge-blue">Dr. Hany Farouk</span>
+        </div>
+        <h3>Digital Forensics & Investigation</h3>
+        <p class="coursedescription">Investigate cybercrimes, recover digital evidence, and analyze security incidents professionally.</p>
+        <button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfvo3nOsmN')">Watch Intro</button>
+        <button class="watch-btn on" onclick="location.href='login_signup.html'">Enroll Now</button>
+    </div>
+</div>
+
+<!-- Engineering -->
+<div class="course-card" data-category="engineering">
+    <div class="card-image"><img src="media/courses/cloud.jpg"></div>
+    <div class="card-footer">
+        <div class="footer-top">
+            <span class="badge badge-blue">Engineering</span>
+            <span class="price"><b>$130</b></span>
+            <span class="badge badge-blue">ENG. Youssef Ali</span>
+        </div>
+        <h3>Cloud Computing with AWS</h3>
+        <p class="coursedescription">Deploy and manage applications on Amazon Web Services — from basics to cloud architecture.</p>
+        <button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfvoZnOsH2')">Watch Intro</button>
+        <button class="watch-btn on" onclick="location.href='login_signup.html'">Enroll Now</button>
+    </div>
+</div>
+
+<div class="course-card" data-category="engineering">
+    <div class="card-image"><img src="media/courses/embedded.jpg"></div>
+    <div class="card-footer">
+        <div class="footer-top">
+            <span class="badge badge-blue">Engineering</span>
+            <span class="price"><b>$95</b></span>
+            <span class="badge badge-blue">Prof. Mohamed Shafei</span>
+        </div>
+        <h3>Embedded Systems Programming</h3>
+        <p class="coursedescription">Program microcontrollers and embedded systems using C, covering hardware interfacing and real-time systems.</p>
+        <button class="watch-btn" onclick="playVideo('https://go.screenpal.com/watch/cOfvo5nOs7j')">Watch Intro</button>
+        <button class="watch-btn on" onclick="location.href='login_signup.html'">Enroll Now</button>
+    </div>
+</div>
+</main>
+    <div id="videoModal" class="courses-modal">
+    <div class="courses-modal-content">
+        <span class="close-btn" onclick="closeVideo()">&times;</span>
+        <iframe id="myVideo" width="100%" height="450" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+<hr class="footerhr">
+
+        <footer>
+            <div class="footerst">
+              <div class="footerhead">
+                <h2>
+                  <img class="logo-foot" src="media/footer-logo.png" alt="EduHUb">
+                  EduHub
+                </h2>
+                <p>
+                    Empowering learners worldwide with quality education and expert instruction. Start your journey today
+                </p>
+               </div>
+                <div class="footer-nav">
+                    <h3>Quick Links</h3>
+                    <ul type="none">
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="login.html">Login</a></li>
+           
+            </ul> 
+                </div>
+                <div class="contactinfo-dash">
+                    <h3>Contact Info.</h3>
+                    <p>📩support@eduhub.com</p>
+                    <p>📞+201094193970</p>  
+                    <P>📍Road 153 , Maadi city Egypt</P>  
+                </div>
+               <p class="footerfoot">© 2026 EduHub. All rights reserved.</p>
+            </div>
+        </footer>
+</html>
+

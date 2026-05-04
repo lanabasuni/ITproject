@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+     <script>
+  if (localStorage.getItem("theme") === "dark") {
+    document.documentElement.classList.add("dark");
+  }
+</script>
+    <head>
+        <title>EduHub</title>
+        <link rel="stylesheet" href="stylesheet.css">
+    </head>
+    <body>
+    <nav>
+       <div class="logo">
+                 <img src="media/logo.png" alt="EduHub Logo" class="logo-icon"/>
+                 EduHub
+            </div>
+        <ul type="none">
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="login.html"class="active">Login</a></li>
+            <li>
+               <button id="theme-toggle" class="toggletheme">
+                 <img src="media/themes.png"/>
+               </button>
+            </li>
+            </ul>
+            
+    </nav>
+      </header>
+       <main class="signup-main">
+        <section class="signup-section">
+            <div class="signup-box">
+                <h1>Create an Account</h1>
+                <p>join us and start learning today</p>
+
+                <form id="Signupform">
+                    
+                    <label>Full Name</label>
+                    <div class="input-box">
+                    <i class="fa-regular fa-envelope"></i>
+                    <input type="text" id="Name" placeholder="Enter your full Name">
+                    <span class="error" id="nameError"></span>
+                    </div>
+                    <label>Email Address</label>
+
+                    <div class="input-box">
+                    <i class="fa-regular fa-envelope"></i>
+                    <input type="text" id="email" placeholder="Enter your email">
+                    <span class="error" id="emailError"></span>
+                    </div>
+
+                    <label>Password</label>
+                    <div class="input-box">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="password" placeholder="Enter your password">
+                    <span class="error" id="passError"></span>
+                    </div>
+                    
+                    <label>Confirm Password</label>
+                    <div class="input-box">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="confirmpassword" placeholder="Enter your password again">
+                    <span class="error" id="confirmError"></span>
+                    </div>
+
+                    <button type="submit">Sign up</button>
+
+                    <p class="login">
+                       Already have an account ?
+                       <a href="login.html" class="login-link">Log in</a>
+                   </p>
+
+                    </form>
+                    </section>
+
+                      <div class="signupcard">
+                        <h3 class="signupcardheader">Why join EduHub ?</h3>
+                        <p class="signupcardtext">✓ Learn from expert instructors</p>
+                        <p class="signupcardtext">✓ Earn certificates</p>
+                        <p class="signupcardtext">✓ Join a community of learners</p>
+                      </div>
+
+                    </main>
+                <footer>
+             <hr class="footerhr">
+            <div class="footerst">
+              <div class="footerhead">
+                <h2>
+                  <img class="logo-foot" src="media/footer-logo.png" alt="EduHUb">
+                  EduHub
+                </h2>
+                <p>
+                    Empowering learners worldwide with quality education and expert instruction. Start your journey today
+                </p>
+               </div>
+                <div class="footer-nav">
+                    <h3>Quick Links</h3>
+                    <ul type="none">
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="login.html">Login</a></li>
+           
+            </ul>
+                </div>
+                <div class="contactinfo-dash">
+                    <h3>Contact Info.</h3>
+                    <p>📩support@eduhub.com</p>
+                    <p>📞+201094193970</p>  
+                    <P>📍Road 153 , Maadi city Egypt</P>  
+                </div>
+               <p class="footerfoot">© 2026 EduHub. All rights reserved.</p>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>  

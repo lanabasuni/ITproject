@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <script>
+  if (localStorage.getItem("theme") === "dark") {
+    document.documentElement.classList.add("dark");
+  }
+</script>
+    <head>
+        <title>EduHub</title>
+        <link rel="stylesheet" id="themeStylesheet" href="stylesheet.css">
+    </head>
+    <style>
+        a{
+            text-decoration: none;
+        }
+    </style>
+    <body>
+        <header>
+           <nav>
+             <div class="logo">
+                 <img src="media/logo.png" alt="EduHub Logo" class="logo-icon"/>
+                 EduHub
+            </div>
+               <ul>
+                  <li><a href="index.html" class="active">Home</a></li>
+                  <li><a href="courses.html">Courses</a></li>
+                  <li><a href="resources.html">Resources</a></li>
+                  <li><a href="schedule.html">Schedule</a></li>
+                  <li><a href="dashboard.html">Dashboard</a></li>
+                  <li><a href="contact.html">Contact us</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="login.html">Login</a></li>
+                     <button id="theme-toggle" class="toggletheme">
+                     <img src="media/themes.png"/>
+                     </button>
+                </ul>
+           </nav>
+        </header>
+    <main class="homepage">
+    <div class="home-container1">
+        <h1>Welcome to EduHub</h1>
+        <p>Transform your future with our comprehensive online learning platform. Access world-class courses, expert instructors, and a vibrant learning community.</p>
+      <div class="homebtn">
+        <a href="courses.html" class="coursesbtn">Explore Courses</a>
+        <a href ="login.html" class="startbtn">Get started</a>
+      </div>
+      </div>
+      <div class="cards">
+        <div class="card">
+        <img src="media/courses.png" class="card-image">
+            <h3>500+ Courses</h3>
+            <p>Wide range of subjects from technology to arts</p>
+        </div>
+        <div class="card">
+        <img src="media/students.png" class="card-image">
+            <h3>50k+ Students</h3>
+            <p>Join a thriving global learning community</p>
+        </div>
+        <div class="card">
+        <img src="media/certified.png" class="card-image">
+            <h3>Certified Programs</h3>
+            <p>Earn recognized certificates upon completion</p>
+        </div>
+        <div class="card">
+        <img src="media/search.png" class="card-image">
+            <h3>Smart search</h3>
+            <p>Find the perfect course with advanced filters</p>
+        </div>
+    </div> 
+    <div class="featured-catg">
+        <h3>Featured Categories</h3>
+  <div class="imagemap">
+    <img src="https://x02.me/i/RTT86.png" usemap="#eduhub-map">
+    <map name="eduhub-map">
+     <area shape="rect" coords="334,93,649,323" href="#" class="card" data-filter="programming">
+     <area shape="rect" coords="834,78,1123,319" href="#" class="card" data-filter="engineering"> 
+     <area shape="rect" coords="229,488,534,728" href="#" class="card" data-filter="cybersecurity"> 
+     <area shape="rect" coords="991,500,1216,733" href="#" class="card" data-filter="business">
+     <area shape="rect" coords="632,706,888,960" href="#" class="card" data-filter="design">
+    </map>
+      
+</div>
+</div>
+</main>
+        <footer>
+             <hr class="footerhr">
+            <div class="footerst">
+              <div class="footerhead">
+                <h2>
+                  <img class="logo-foot" src="media/footer-logo.png" alt="EduHUb">
+                  EduHub
+                </h2>
+                <p>
+                    Empowering learners worldwide with quality education and expert instruction. Start your journey today
+                </p>
+               </div>
+                <div class="footer-nav">
+                    <h3>Quick Links</h3>
+                    <ul type="none">
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="login.html">Login</a></li>
+           
+            </ul>
+                </div>
+                <div class="contactinfo-dash">
+                    <h3>Contact Info.</h3>
+                    <p>📩support@eduhub.com</p>
+                    <p>📞+201094193970</p>  
+                   <P>📍Road 153 , Maadi city Egypt</P>   
+                </div>
+               <p class="footerfoot">© 2026 EduHub. All rights reserved.</p>
+            </div>
+        </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
+       <script src="script.js"></script>
+   <script>
+    window.onload = function () {
+    imageMapResize();
+    };
+   </script>
+ </body>
+</html>  

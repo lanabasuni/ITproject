@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  <script>
+  if (localStorage.getItem("theme") === "dark") {
+    document.documentElement.classList.add("dark");
+  }
+</script>
+    <head>
+        <title>EduHub</title>
+        <link rel="stylesheet" href="stylesheet.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+    <nav>
+        <div class="logo">
+                 <img src="media/logo.png" alt="EduHub Logo" class="logo-icon"/>
+                 EduHub
+            </div>
+        <ul type="none">
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="dashboard.html"class="active">Dashboard</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li>
+               <button id="theme-toggle" class="toggletheme">
+                 <img src="media/themes.png"/>
+               </button>
+            </li>
+            </ul>
+    </nav>
+    <div class="headtext-dash">
+           <h2>My Learning Dashboard</h2>
+           <p>
+            Track your progress and continue your learning journey with expert-led courses designed to help you master new skills.
+           </p>
+    </div>
+ 
+  <div class="cardscontainer-dash">
+    <div class="cards-dash">
+        <div clas="cardscontainer-dash">
+            <span class="icons-dash">↗️</span>
+            <h3>Overall Progress</h3>
+        </div>
+        <p>71%</p>
+    </div>
+
+    <div class="cards-dash">
+        <div clas="cardscontainer-dash">
+            <span class="icons-dash">🎖️</span>
+            <h3>Courses Completed</h3>
+        </div>
+        <p>2</p>
+    </div>
+    
+    <div class="cards-dash">
+      <div clas="cardscontainer-dash">
+        <span class="icons-dash">⌚</span>
+        <h3>Hours Learned</h3>
+      </div>
+        <p>102</p>
+    </div>
+  </div>
+    <section class="MyCourses-dash">
+        <h2>My Courses</h2>
+        <div class="courses-dash">
+            <h3>Front-End Web Development</h3>
+            <p class="instructor-dash">Dr. Amr Khaled</p>
+            <div class="progress-bar">
+      <div class="progress-fill" style="width: 75%;"></div>
+    </div>
+    <p class="progress-text">18 of 24 lessons completed (75%)</p>
+
+          <div class="nextlesson-dash">
+            <p>⏭️ Next: JavaScript Advanced Concepts</p>
+            <p> ⏳ Due: May 15, 2026 </p>
+          </div>
+          <p class="hours">⌚ Total Hours: 32</p>
+          <a href="courses.html">
+           <button class="continuebtn">Continue Learning</button>
+          </a>
+        </div> 
+
+        <div class="courses-dash">
+            <h3>Graphic Design Masterclass</h3>
+            <p class="instructor-dash">Dr. Omar Mohamed Salah</p>
+            <div class="progress-bar">
+      <div class="progress-fill" style="width: 100%;"></div>
+    </div>
+    <p class="progress-text">20 of 20 lessons completed (100%)</p>
+
+          <div class="nextlesson-dash">
+            <p>⏭️ Next: Course Completed</p>
+            <p>⏳ Due: Completed</p>          
+          </div>
+          <p class="hours-dash"> ⌚ Total Hours: 28</p>
+          <a href="https://x02.me/i/YC7Y.png" target="_blank">
+             <button class="certificatebtn">View Your Certificate</button>
+          </a>
+        </div>
+
+        <div class="courses-dash">
+            <h3>Video Editing Masterclass</h3>
+            <p class="instructor-dash">Prof. Lana Ahmed</p>
+            <div class="progress-bar">
+      <div class="progress-fill" style="width: 33%;"></div>
+    </div>
+    <p class="progress-text">10 of 30 lessons completed (33%)</p>
+
+          <div class="nextlesson-dash">
+            <p>⏭️ Next: Effects & Motion Graphics</p>
+            <p> ⏳ Due: August 13, 2026 </p>
+          </div>
+          <p class="hours">⌚ Total Hours: 25</p>
+          <a href="courses.html">
+           <button class="continuebtn">Continue Learning</button>
+          </a>
+        </div>
+
+        <div class="courses-dash">
+            <h3>Ethical Hacking course</h3>
+            <p class="instructor-dash">ENG. Farah Gamal</p>
+            <div class="progress-bar">
+      <div class="progress-fill" style="width: 50%;"></div>
+    </div>
+    <p class="progress-text">18 of 36 lessons completed (50%)</p>
+
+          <div class="nextlesson-dash">
+            <p>⏭️ Next: Linux & Command Line</p>
+            <p> ⏳ Due: July 8, 2026 </p>
+          </div>
+          <p class="hours">⌚ Total Hours: 34</p>
+          <a href="courses.html">
+           <button class="continuebtn">Continue Learning</button>
+          </a>
+        </div>
+
+        <div class="courses-dash">
+            <h3>Embedded Systems Programming</h3>
+            <p class="instructor-dash">Prof. Mohamed Shafei</p>
+            <div class="progress-bar">
+      <div class="progress-fill" style="width: 100%;"></div>
+    </div>
+    <p class="progress-text">27 of 27 lessons completed (100%)</p>
+
+          <div class="nextlesson-dash">
+            <p> ⏭️ Next: Course Completed</p>
+            <p>⏳ Due: Completed</p>   
+          </div>
+          <p class="hours-dash"> ⌚ Total Hours: 25</p>
+          <a href="https://x02.me/i/8G2W24.png" target="_blank">
+           <button class="certificatebtn">View Your Certificate</button>
+          </a>
+        </div>
+        </div> 
+    </section>
+    </body>
+      <hr class="footerhr">
+
+        <footer>
+            <div class="footerst">
+              <div class="footerhead">
+                <h2>
+                  <img class="logo-foot" src="media/footer-logo.png" alt="EduHUb">
+                  EduHub
+                </h2>
+                <p>
+                    Empowering learners worldwide with quality education and expert instruction. Start your journey today
+                </p>
+               </div>
+                <div class="footer-nav">
+                    <h3>Quick Links</h3>
+                    <ul type="none">
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="login.html">Login</a></li>
+           
+            </ul>
+                </div>
+                <div class="contactinfo-dash">
+                    <h3>Contact Info.</h3>
+                    <p>📩support@eduhub.com</p>
+                    <p>📞+201094193970</p>  
+                    <P>📍Road 153 , Maadi city Egypt</P>  
+                </div>
+               <p class="footerfoot">© 2026 EduHub. All rights reserved.</p>
+            </div>
+        </footer>
+   </html>
+ 
